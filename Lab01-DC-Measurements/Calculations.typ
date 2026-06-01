@@ -2,12 +2,13 @@
 #show math.equation.where(block: true):  it => rect(it,radius: 1em, inset: 1em, fill: silver)
 #set heading(numbering: "1.A.1.a")
 = Lab 1 Calculations
-#image("Exp1-1.png", height: 80%)
+#image("Exp1-1.png", height: 60%)
 == Equivalent Resistance Calculation
 === Figure 1-6(a)
 ====
 The equivalent resistance between nodes A & B, $R_"AB"$
 
+You can find $R_"EQ"_"AB"$ using parallel/series reduction.
 $
   R_"EQ"_"AB" &= R_"AB" ||[R_"AD" + (R_"DC" + R_"CB")||R_"DB"]\
   &= 10k Omega || [10k Omega + (10k Omega+10k Omega)||10k Omega]\
@@ -19,6 +20,8 @@ $
 
 ====
 The equivalent resistance between nodes B & D, $R_"BD"$
+
+You can find $R_"EQ"_"BD"$ using parallel/series reduction.
 $
   R_"EQ"_"BD" &= R_"BD" || (R_"BA" + R_"AD") || (R_"BC" + R_"CD") \
   &= 10 k Omega || (10 k Omega + 10 k Omega) || (10 k Omega + 10 k Omega) \
@@ -86,7 +89,6 @@ eq4 = v3 == is * 30000;
 sol = solve([eq1, eq2, eq3, eq4], [is, v1, v2, v3])
 ```
 
-*Solution*
 ```MATLAB
 sol = 
     is: -3/20000
@@ -94,24 +96,41 @@ sol =
     v2: 3
     v3: -9/2
 ```
+
 $
   i_s &= -150 mu A\
   v_1 &= -1.5v \
   v_2 &= 3v \
   v_3 &= -4.5v
 $
-====
-Calculate V1, V2 and V3 again using the voltage division rule and compare the values with those determined in Part a.
-//TODO
 
 ====
-Is the addition of VS, V1 and V3 equal to the value of V2? Why? Explain your reasoning in detail.
-//TODO yes
+Calculate $V_1$, $V_2$ and $V_3$ again using the voltage division rule and compare the values with those determined in Part a.
+$
+  V_1 = V_S times R_1/(R_1 + R_2 + R_3)\
+  = V_S times 1/-6\
+$
+$
+  V_2 = V_S times R_2/(R_1 + R_2 + R_3)\
+  = V_S times 1\3
+$
+$
+  V_3 = V_S times R_3/(R_1 + R_2 + R_3)\
+  = V_S times -1\2
+$
+
+====
+Is the addition of $V_S$, $V_1$ and $V_3$ equal to the value of $V_2$? Why? Explain your reasoning in detail.
+
+#text(fill: green)[Yes, $V_S + V_1 + V_3 = V_2$. You can discover this by doing the calculation by hand or you can recognize that a KVL about current $I_S$ produces that equation.]
 
 === Figure 1-6(c)
 ====
 Calculate $V_O$ for $R=10 k Omega$
-
+$
+  (9 - V_o)/2R = V_o/R + V_o/(1 M Omega)\
+  (9 - V_o)/(20 k Omega) = V_o/(1 k Omega) + V_o/(1 M Omega)\
+$
 
 ```MATLAB
 % Define symbolic variables
@@ -129,8 +148,16 @@ sol =
    4500/1501
 ```
 
+$
+  V_o = //TODO
+$
+
 ====
 Calculate $V_O$ for $R=10 M Omega$
+$
+  (9 - V_o)/2R = V_o/R + V_o/(1 M Omega)
+  (9 - V_o)/(20 M Omega) = V_o/(1 M Omega) + V_o/(1 M Omega)\
+$
 
 ```MATLAB
 % Define symbolic variables
@@ -147,6 +174,8 @@ sol = solve([eq1], [vo])
 sol =
   9/5
 ```
+
+$ V_o = 4.5v $
 
 === Figure 1-6(d)
 ====
@@ -190,6 +219,11 @@ $
 
 ====
 Calculate I2 and I3 again using the current division rule and compare the values with those determined in Part a.
-
+$
+  I_1 = I_S times (R_2 + R_3)/(R_1 + R_2 + R_3)\
+  I_1 = I_S times -1\2
+$
 ====
 Is the addition of I1 and I3 equal to the value of I2? Why? Explain your reasoning in detail.
+
+#text(fill: green)[Yes, $I_1 + I_3 = I_2$ you can verify this by doing the calculation by hand or realizing that a KCL@$V_2$ produces that equation.]
