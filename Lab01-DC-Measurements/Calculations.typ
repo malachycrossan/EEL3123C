@@ -28,20 +28,22 @@ $
   &= 10 k Omega || (20k Omega) || (20k Omega) \
   &= 10 k Omega || 10 k Omega \
   R_"EQ"_"BD" &= 5 k Omega
-
 $
 
 ====
 The equivalent resistance between nodes A & C, $R_"AC"$
 $
-  R_"EQ"_"AC" &= 10k Omega???
+  R_"EQ"_"AC" &= (R_"AD" + R_"DC")||(R_"AB" + R_"BC")\
+  R_"EQ"_"AC" &= (10 k Omega + 10 k Omega)||(10 k Omega + 10 k Omega)\
+  R_"EQ"_"AC" &= (20 k Omega)||(20 k Omega)\
+  R_"EQ"_"AC" &= 10 k Omega\
 $
 
 #pagebreak()
 == Voltage and Current Calculation
 === Figure 1-6(b)
 ====
-Calculate V1, V2, V3 and IS WITHOUT using the voltage division rule.
+Calculate $V_1$, $V_2$, $V_3$ and IS WITHOUT using the voltage division rule.
 #columns(3,
 [
 *Known/Chosen Values*\
@@ -108,27 +110,27 @@ $
 Calculate $V_1$, $V_2$ and $V_3$ again using the voltage division rule and compare the values with those determined in Part a.
 $
   V_1 = V_S times R_1/(R_1 + R_2 + R_3)\
-  = V_S times 1/-6\
+  = V_S times -1/(6) = 1.5v
 $
 $
   V_2 = V_S times R_2/(R_1 + R_2 + R_3)\
-  = V_S times 1\3
+  = V_S times 1\3 = 3v
 $
 $
   V_3 = V_S times R_3/(R_1 + R_2 + R_3)\
-  = V_S times -1\2
+  = V_S times -1\2 = -4.5v
 $
 
 ====
 Is the addition of $V_S$, $V_1$ and $V_3$ equal to the value of $V_2$? Why? Explain your reasoning in detail.
 
-#text(fill: green)[Yes, $V_S + V_1 + V_3 = V_2$. You can discover this by doing the calculation by hand or you can recognize that a KVL about current $I_S$ produces that equation.]
+#text(fill: green)[Yes, $V_S + V_1 + V_3 = V_2$. You can verify this by doing the calculation by hand or you can recognize that a KVL@$I_S$ produces that equation.]
 
 === Figure 1-6(c)
 ====
 Calculate $V_O$ for $R=10 k Omega$
 $
-  (9 - V_o)/2R = V_o/R + V_o/(1 M Omega)\
+  (9 - V_o)/(2R) = V_o/R + V_o/(1 M Omega)\
   (9 - V_o)/(20 k Omega) = V_o/(1 k Omega) + V_o/(1 M Omega)\
 $
 
@@ -149,7 +151,7 @@ sol =
 ```
 
 $
-  V_o = //TODO
+  V_o = 2.998001v
 $
 
 ====
@@ -220,10 +222,22 @@ $
 ====
 Calculate I2 and I3 again using the current division rule and compare the values with those determined in Part a.
 $
+  I_S = (V_S)/(R_1+R_2+R_3)\
+  = 150 mu A
+$
+$
   I_1 = I_S times (R_2 + R_3)/(R_1 + R_2 + R_3)\
-  I_1 = I_S times -1\2
+  I_1 = 4.1 A
+$
+$
+  I_2 = I_S times (R_1 + R_3)/(R_1 + R_2 + R_3)\
+  I_2 = 2.overline(45) A
+$
+$
+  I_3 = I_S times (R_1 + R_2)/(R_1 + R_2 + R_3)\
+  I_3 = -1.overline(63) A
 $
 ====
 Is the addition of I1 and I3 equal to the value of I2? Why? Explain your reasoning in detail.
 
-#text(fill: green)[Yes, $I_1 + I_3 = I_2$ you can verify this by doing the calculation by hand or realizing that a KCL@$V_2$ produces that equation.]
+#text(fill: green)[Yes, $I_1 + I_3 = I_2$. You can verify this by doing the calculation by hand or realizing that a KCL@$V_2$ produces that equation.]
