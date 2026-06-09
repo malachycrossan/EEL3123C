@@ -3,7 +3,11 @@
 #set heading(numbering: "1.A.1.a")
 #set grid(gutter: 1em)
 
-= Lab 2 Calculations
+#counter(heading).update(1)
+= Lab Calculations
+Section 13\
+Malachy Crossan 5522964\
+Jacob Rosen 5534974\
 == Nodal & Mesh Analysis, Thevenin's Theorem and Superposition
 For the circuit in Figure 3-1, all 7 resistors have different resistance values. For each resistor, choose any resistance value within the range of $1 k Omega$ to $56 k Omega$ unless specified otherwise.
 #grid(columns: 2,
@@ -61,7 +65,7 @@ Leave AB open, as shown in Figure 3-2(b). Use nodal analysis to calculate the vo
 
 $ bold("KCL"@V_1)\ 0 = (12V-V_1)/R_1 + (0-V_1)/R_3 + (V_2-V_1)/R_4 $
 $ bold("KCL"@V_2)\ 0 = (V_1-V_2)/R_4 + (-10-V_2)/R_5 + (V_3-V_2)/R_6 $
-$ bold("KCL"@V_3)\ 0 = (V_2-V_3)/R_6 + (-5-V_3)/R_7 $
+$ bold("KCL"@V_3)\ 0 = (V_2-V_3)/R_6 + (5-V_3)/R_7 $
 
 ][
   #image("figure3-2b.png")
@@ -82,15 +86,15 @@ syms V1 V2 V3;
 % KCL equations
 eq1 = 0 == (12 - V1)/R1 + (0 - V1)/R3 + (V2 - V1)/R4;
 eq2 = 0 == (V1 - V2)/R4 + (-10 - V2)/R5 + (V3 - V2)/R6;
-eq3 = 0 == (V2 - V3)/R6 + (-5 - V3)/R7;
+eq3 = 0 == (V2 - V3)/R6 + (5 - V3)/R7;
 % Solve for node voltages
 voltages = solve([eq1, eq2, eq3], [V1, V2, V3])
 ```
 $
   V_1 &= 8.287 V\
-  V_2 &= -1.214 V\
-  V_3 &= -3.031 V\
-  V_"AB" &= V_1 - V_3 = 11.318 V\
+  V_2 &= 0.572 V\
+  V_3 &= 2.698 V\
+  V_"AB" &= V_1 - V_3 = 5.715 V\
 $
 ]
 
@@ -98,19 +102,19 @@ $
 Find Thevenin's and Norton's Equivalent using the results from the previous two steps.
 
 $
-  V_"TH" &= V_"AB" = 11.318 V\
-  R_"TH" &= V_"AB"/I_"AB" = 19.47 k Omega\
+  V_"TH" &= V_"AB" = 5.715 V\
+  R_"TH" &= V_"AB"/I_"AB" = 9.836 k Omega\
   I_"N" &= I_"AB" = 581 mu A\
-  R_"N" &= R_"TH" = 19.47 k Omega\
+  R_"N" &= R_"TH" = 9.836 k Omega\
 $
 
 ===
 Connect a resistor between nodes A and B. Use Thevenin's theorem to calculate the current through this resistor for the following 3 resistor values: $1 k Omega$, $2.2 k Omega$ and $4.7 k Omega$.
 
 $
-  I_1 &= V_"TH"/(R_"TH" + 1 k Omega) = 553 mu A\
-  I_2 &= V_"TH"/(R_"TH" + 2.2 k Omega) = 522 mu A\
-  I_3 &= V_"TH"/(R_"TH" + 4.7 k Omega) = 468 mu A\
+  I_1 &= V_"TH"/(R_"TH" + 1 k Omega) = 527 mu A\
+  I_2 &= V_"TH"/(R_"TH" + 2.2 k Omega) = 475 mu A\
+  I_3 &= V_"TH"/(R_"TH" + 4.7 k Omega) = 393 mu A\
 $
 
 ===
@@ -149,14 +153,14 @@ $
 ```
 eq1 = 0 == (0 - V1)/R1 + (0 - V1)/R3 + (V2 - V1)/R4;
 eq2 = 0 == (V1 - V2)/R4 + (0 - V2)/R5 + (V3 - V2)/R6;
-eq3 = 0 == (V2 - V3)/R6 + (-5 - V3)/R7;
+eq3 = 0 == (V2 - V3)/R6 + (5 - V3)/R7;
 ```
 
 $
-  V_1 &= -62 m V\
-  V_2 &= -893 m V\
-  V_3 &= -2.864 V\
-  V_"AB" &= V_1 - V_3 = 2.802 V\
+  V_1 &= 62 m V\
+  V_2 &= 893 m V\
+  V_3 &= 2.864 V\
+  V_"AB" &= V_1 - V_3 = -2.802 V\
 $
 ]
 //TODO: Add the above three voltages. What have you discovered? Provide a detailed explanation of your discovery.
@@ -164,5 +168,5 @@ $
 *Superposition:*\
 Adding the three voltages demonstrates voltage superposition. The actual voltage can be calculated by summing the individual contributions from each voltage source. The $1 m V$ discrepancy is due to accumulated rounding errors in the calculations.
 $
-  Sigma V_"AB" = 6.689 V + 1.828 V + 2.802 V = 11.319 V approx 11.318 V\
+  Sigma V_"AB" = 6.689 V + 1.828 V + (-2.802 V) = 5.714 approx 5.715 V\
 $
