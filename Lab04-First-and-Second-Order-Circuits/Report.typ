@@ -1,19 +1,21 @@
+#show raw.where(lang: "Octave"): it => rect(it, width: 100%, radius: .5em, inset: 1em,)
+#show math.equation.where(block: true):  it => rect(it,radius: 1em, inset: 1em, fill: silver)
 #let octave(script, filename) = grid(
-columns:(1fr,2fr),
+columns:(1fr,2fr), gutter: .1em,
 {
   set text(size: 10pt)
-  script
+  raw(lang:"Octave",script)
 },
 image(filename)
 )
-$
+/*$
   R = 1 k Omega\
   C = .1 mu F\
   L=100 m H\
   X(t)=X(oo)+[X(0)-X(oo)]times e^(-t/tau)\
   tau_"RC" = R times C\
   tau_"RL" = L/R\
-$
+$*/
 = First Order Circuits
 == Analytical expression for $V_"out"$ in lab manual figure 4-3
 === fig 4-3 (a)
@@ -90,7 +92,7 @@ print -dsvg fig4-3d.svg
 === fig 4-4 (a)
 $
   V_"out" = Sigma V_"C" &= V_"C"(0s<t<10s) +  V_"C"(10s<t<20s) +  V_"C"(20s<t<30s)\
-  &= E(1-e^(-t/(100 mu s))) - 2E(1-e^(-(t-5)/(100 mu s))) + 3E(1-e^(-(t-10)/(100 mu s)))\
+  &= E(1-e^(-t/(100 mu s))) - 2E(1-e^(-(t-5)/(100 mu s))) + 3E(1-e^(-(t-10)/(100 mu s)))+...\
 $ 
 === fig 4-4 (b)
 $
@@ -110,7 +112,7 @@ $
   &= E e^(-t/((100 m H)/(1 k Omega)))\
   V_"out"(t) &= E e^(-t/(100 mu s))\
 $
-== figure 4-4 voltage across inductor
-//TODO
 
 
+#include "Report-2.typ"
+//#include "Report-3.typ"

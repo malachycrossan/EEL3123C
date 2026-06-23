@@ -1,8 +1,8 @@
 = Second Order Circuits
-$
+/*$
   C=0.01 mu F
   L=100 m H
-$
+$*/
 
 == Fig 4-5
 === Fig 4-5 (a)
