@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en-US" class=" idc0_343 zzvdtiod fcqwohkbxv" data-lt-installed="true"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="pingback" href="">
+
+	<title>#4: First and Second Order Circuits – EEL 3123 Linear Circuits II Lab Manual</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.ece.ucf.edu/labs/EEL3123/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ece.ucf.edu%2Flabs%2FEEL3123%2Fexperiments%2Fexpriment-4-first-order-circuits%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.ece.ucf.edu/labs/EEL3123/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ece.ucf.edu%2Flabs%2FEEL3123%2Fexperiments%2Fexpriment-4-first-order-circuits%2F&amp;format=xml">
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel="stylesheet" id="wp-quicklatex-format-css" href="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex-format.css" media="all">
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel="stylesheet" id="zooom-css" href="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/magnify.css" media="all">
+<link rel="stylesheet" id="bootstrap-css" href="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/bootstrap.min.css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/all.min.css" media="all">
+<link rel="stylesheet" id="shapely-fonts-css" href="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/css.css" media="all">
+<link rel="stylesheet" id="flexslider-css" href="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/flexslider.css" media="all">
+<link rel="stylesheet" id="shapely-style-css" href="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/style.css" media="all">
+<link rel="stylesheet" id="shapely-custom-css" href="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/custom.css" media="all">
+<link rel="stylesheet" id="owl.carousel-css" href="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/owl.carousel.min.css" media="all">
+<link rel="stylesheet" id="owl.carousel.theme-css" href="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/owl.theme.default.css" media="all">
+<link rel="stylesheet" id="tablepress-default-css" href="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/default.css" media="all">
+<link rel="stylesheet" id="katex-css" href="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/katex.min.css" media="all">
+<script id="jquery-core-js" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/jquery.min.js"></script>
+<script id="jquery-migrate-js" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/jquery-migrate.min.js"></script>
+<script id="wp-quicklatex-frontend-js" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/wp-quicklatex-frontend.js"></script>
+<link rel="https://api.w.org/" href="https://www.ece.ucf.edu/labs/EEL3123/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://www.ece.ucf.edu/labs/EEL3123/wp-json/wp/v2/pages/87"><meta name="generator" content="WordPress 7.0">
+<link rel="canonical" href="https://www.ece.ucf.edu/labs/EEL3123/experiments/expriment-4-first-order-circuits/">
+<link rel="shortlink" href="https://www.ece.ucf.edu/labs/EEL3123/?p=87">
+<style type="text/css">.page-title-section .page-title {color:#000000 !important; }</style><link rel="icon" href="https://www.ece.ucf.edu/labs/EEL3123/wp-content/uploads/2018/07/cropped-logo-1-32x32.png" sizes="32x32">
+<link rel="icon" href="https://www.ece.ucf.edu/labs/EEL3123/wp-content/uploads/2018/07/cropped-logo-1-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://www.ece.ucf.edu/labs/EEL3123/wp-content/uploads/2018/07/cropped-logo-1-180x180.png">
+<meta name="msapplication-TileImage" content="https://www.ece.ucf.edu/labs/EEL3123/wp-content/uploads/2018/07/cropped-logo-1-270x270.png">
+<style id="wp-custom-css">
+custom logo logo
+{
+	visibility: hidden;
+}
+</style>
+<style>.rdp {
+  --rdp-cell-size: 40px;
+  --rdp-accent-color: #0000ff;
+  --rdp-background-color: #e7edff;
+  --rdp-accent-color-dark: #3003e1;
+  --rdp-background-color-dark: #180270;
+  --rdp-outline: 2px solid var(--rdp-accent-color); /* Outline border for focused elements */
+  --rdp-outline-selected: 2px solid rgba(0, 0, 0, 0.75); /* Outline border for focused _and_ selected elements */
+
+  margin: 1em;
+}
+
+/* Hide elements for devices that are not screen readers */
+.rdp-vhidden {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute !important;
+  top: 0;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  border: 0 !important;
+}
+
+/* Buttons */
+.rdp-button_reset {
+  appearance: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  cursor: default;
+  color: inherit;
+  outline: none;
+  background: none;
+  font: inherit;
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.rdp-button {
+  border: 2px solid transparent;
+}
+
+.rdp-button[disabled] {
+  opacity: 0.25;
+}
+
+.rdp-button:not([disabled]) {
+  cursor: pointer;
+}
+
+.rdp-button:focus:not([disabled]),
+.rdp-button:active:not([disabled]) {
+  color: inherit;
+  border: var(--rdp-outline);
+  background-color: var(--rdp-background-color);
+}
+
+.rdp-button:hover:not([disabled]) {
+  background-color: var(--rdp-background-color);
+}
+
+.rdp-months {
+  display: flex;
+}
+
+.rdp-month {
+  margin: 0 1em;
+}
+
+.rdp-month:first-child {
+  margin-left: 0;
+}
+
+.rdp-month:last-child {
+  margin-right: 0;
+}
+
+.rdp-table {
+  margin: 0;
+  max-width: calc(var(--rdp-cell-size) * 7);
+  border-collapse: collapse;
+}
+
+.rdp-with_weeknumber .rdp-table {
+  max-width: calc(var(--rdp-cell-size) * 8);
+  border-collapse: collapse;
+}
+
+.rdp-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  text-align: left;
+}
+
+.rdp-multiple_months .rdp-caption {
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+.rdp-caption_dropdowns {
+  position: relative;
+  display: inline-flex;
+}
+
+.rdp-caption_label {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0 0.25em;
+  white-space: nowrap;
+  color: currentColor;
+  border: 0;
+  border: 2px solid transparent;
+  font-family: inherit;
+  font-size: 140%;
+  font-weight: bold;
+}
+
+.rdp-nav {
+  white-space: nowrap;
+}
+
+.rdp-multiple_months .rdp-caption_start .rdp-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.rdp-multiple_months .rdp-caption_end .rdp-nav {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.rdp-nav_button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--rdp-cell-size);
+  height: var(--rdp-cell-size);
+  padding: 0.25em;
+  border-radius: 100%;
+}
+
+/* ---------- */
+/* Dropdowns  */
+/* ---------- */
+
+.rdp-dropdown_year,
+.rdp-dropdown_month {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.rdp-dropdown {
+  appearance: none;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: inherit;
+  opacity: 0;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.rdp-dropdown[disabled] {
+  opacity: unset;
+  color: unset;
+}
+
+.rdp-dropdown:focus:not([disabled]) + .rdp-caption_label,
+.rdp-dropdown:active:not([disabled]) + .rdp-caption_label {
+  border: var(--rdp-outline);
+  border-radius: 6px;
+  background-color: var(--rdp-background-color);
+}
+
+.rdp-dropdown_icon {
+  margin: 0 0 0 5px;
+}
+
+.rdp-head {
+  border: 0;
+}
+
+.rdp-head_row,
+.rdp-row {
+  height: 100%;
+}
+
+.rdp-head_cell {
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: 700;
+  text-align: center;
+  height: 100%;
+  height: var(--rdp-cell-size);
+  padding: 0;
+}
+
+.rdp-tbody {
+  border: 0;
+}
+
+.rdp-tfoot {
+  margin: 0.5em;
+}
+
+.rdp-cell {
+  width: var(--rdp-cell-size);
+  height: 100%;
+  height: var(--rdp-cell-size);
+  padding: 0;
+  text-align: center;
+}
+
+.rdp-weeknumber {
+  font-size: 0.75em;
+}
+
+.rdp-weeknumber,
+.rdp-day {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: var(--rdp-cell-size);
+  max-width: var(--rdp-cell-size);
+  height: var(--rdp-cell-size);
+  margin: 0;
+  border: 2px solid transparent;
+  border-radius: 100%;
+}
+
+.rdp-day_today:not(.rdp-day_outside) {
+  font-weight: bold;
+}
+
+.rdp-day_selected:not([disabled]),
+.rdp-day_selected:focus:not([disabled]),
+.rdp-day_selected:active:not([disabled]),
+.rdp-day_selected:hover:not([disabled]) {
+  color: white;
+  background-color: var(--rdp-accent-color);
+}
+
+.rdp-day_selected:focus:not([disabled]) {
+  border: var(--rdp-outline-selected);
+}
+
+.rdp:not([dir='rtl']) .rdp-day_range_start:not(.rdp-day_range_end) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.rdp:not([dir='rtl']) .rdp-day_range_end:not(.rdp-day_range_start) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.rdp[dir='rtl'] .rdp-day_range_start:not(.rdp-day_range_end) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.rdp[dir='rtl'] .rdp-day_range_end:not(.rdp-day_range_start) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.rdp-day_range_end.rdp-day_range_start {
+  border-radius: 100%;
+}
+
+.rdp-day_range_middle {
+  border-radius: 0;
+}
+</style></head>
+
+<body class="wp-singular page-template-default page page-id-87 page-child parent-pageid-77 wp-custom-logo wp-theme-shapely has-sidebar-right">
+	<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<header id="masthead" class="site-header" role="banner">
+		<div class="nav-container">
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<div class="container nav-bar">
+					<div class="flex-row">
+						<div class="module left site-title-container">
+							<a href="https://www.ece.ucf.edu/labs/EEL3123/" class="custom-logo-link" rel="home" itemprop="url"><img width="582" height="52" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/Site-Banner-768x69.png" class="custom-logo logo" alt="EEL 3123 Linear Circuits II Lab Manual" itemprop="logo" decoding="async" srcset="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/Site-Banner-768x69.png 768w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/Site-Banner-300x27.png 300w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/Site-Banner-1024x91.png 1024w" sizes="(max-width: 582px) 100vw, 582px"></a>						</div>
+						<button class="module widget-handle mobile-toggle right visible-sm visible-xs">
+							<i class="fa fa-bars"></i>
+						</button>
+						<div class="module-group right">
+							<div class="module left">
+								<div class="collapse navbar-collapse navbar-ex1-collapse"><ul id="menu" class="menu"><li id="menu-item-123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-123 dropdown"><a title="Introduction" href="https://www.ece.ucf.edu/labs/EEL3123/">Introduction </a><span class="dropdown-toggle shapely-dropdown" data-toggle="dropdown"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+<ul role="menu" class=" dropdown-menu">
+	<li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129"><a title="Safety Rules &amp; Operating Procedures" href="https://www.ece.ucf.edu/labs/EEL3123/table-of-contents/safety-rules-operating-procedures/">Safety Rules &amp; Operating Procedures</a></li>
+	<li id="menu-item-130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a title="Laboratory Safety Information" href="https://www.ece.ucf.edu/labs/EEL3123/table-of-contents/laboratory-safety-information/">Laboratory Safety Information</a></li>
+	<li id="menu-item-131" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131"><a title="Troubleshooting Hints" href="https://www.ece.ucf.edu/labs/EEL3123/table-of-contents/troubleshooting-hints/">Troubleshooting Hints</a></li>
+</ul>
+</li>
+<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-78 dropdown"><a title="Experiments" href="https://www.ece.ucf.edu/labs/EEL3123/experiments/">Experiments </a><span class="dropdown-toggle shapely-dropdown" data-toggle="dropdown"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+<ul role="menu" class=" dropdown-menu">
+	<li id="menu-item-134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134"><a title="#1: DC Measurements" href="https://www.ece.ucf.edu/labs/EEL3123/experiments/experiment-1-dc-measurements/">#1: DC Measurements</a></li>
+	<li id="menu-item-136" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136"><a title="#2: Circuit Analysis Techniques" href="https://www.ece.ucf.edu/labs/EEL3123/experiments/experiment-2-network-analysis-methods/">#2: Circuit Analysis Techniques</a></li>
+	<li id="menu-item-135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-135"><a title="#3: AC Measurements" href="https://www.ece.ucf.edu/labs/EEL3123/experiments/experiment-3-ac-measurements/">#3: AC Measurements</a></li>
+	<li id="menu-item-137" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-87 current_page_item menu-item-137 active"><a title="#4: First and Second Order Circuits" href="https://www.ece.ucf.edu/labs/EEL3123/experiments/expriment-4-first-order-circuits/">#4: First and Second Order Circuits</a></li>
+</ul>
+</li>
+<li id="menu-item-1200" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1200 dropdown"><a title="Projects" href="https://www.ece.ucf.edu/labs/EEL3123/projects/">Projects </a><span class="dropdown-toggle shapely-dropdown" data-toggle="dropdown"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+<ul role="menu" class=" dropdown-menu">
+	<li id="menu-item-1203" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1203"><a title="Project #1 Thevenin’s Theorem" href="https://www.ece.ucf.edu/labs/EEL3123/projects/project-1/">Project #1 Thevenin’s Theorem</a></li>
+	<li id="menu-item-1207" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1207 dropdown"><a title="Project #2 Circuit Design #1" href="https://www.ece.ucf.edu/labs/EEL3123/projects/project-2-circuit-design-1/">Project #2 Circuit Design #1 </a><span class="dropdown-toggle shapely-dropdown" data-toggle="dropdown"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+	<ul role="menu" class=" dropdown-menu">
+		<li id="menu-item-1208" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1208"><a title="Circuit Design Part A" href="https://www.ece.ucf.edu/labs/EEL3123/projects/circuit-design-part-a/">Circuit Design Part A</a></li>
+		<li id="menu-item-1206" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1206"><a title="Circuit Design Part B" href="https://www.ece.ucf.edu/labs/EEL3123/projects/circuit-design-part-b/">Circuit Design Part B</a></li>
+		<li id="menu-item-1205" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1205"><a title="Circuit Design Part C" href="https://www.ece.ucf.edu/labs/EEL3123/projects/circuit-design-part-c/">Circuit Design Part C</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1258" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1258"><a title="Project #3 AC Load Measurement" href="https://www.ece.ucf.edu/labs/EEL3123/projects/project-5-ac-load-measurement/">Project #3 AC Load Measurement</a></li>
+	<li id="menu-item-1214" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1214"><a title="Project #4 Circuit Element Identification" href="https://www.ece.ucf.edu/labs/EEL3123/projects/project-4-circuit-element-identification/">Project #4 Circuit Element Identification</a></li>
+	<li id="menu-item-1211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1211"><a title="Project #5 Circuit Design #2" href="https://www.ece.ucf.edu/labs/EEL3123/projects/project-3-circuit-design-2/">Project #5 Circuit Design #2</a></li>
+</ul>
+</li>
+<li id="menu-item-102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-102 dropdown"><a title="Appendix" href="https://www.ece.ucf.edu/labs/EEL3123/appendix/">Appendix </a><span class="dropdown-toggle shapely-dropdown" data-toggle="dropdown"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+<ul role="menu" class=" dropdown-menu">
+	<li id="menu-item-1072" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1072"><a title="I. Lab Component" href="https://www.ece.ucf.edu/labs/EEL3123/appendix/i-lab-component/">I. Lab Component</a></li>
+	<li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145"><a title="II. List of Available Resistors &amp; Capacitors" href="https://www.ece.ucf.edu/labs/EEL3123/appendix/list-of-available-resistors-capacitors/">II. List of Available Resistors &amp; Capacitors</a></li>
+	<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a title="III. Standard Resistor Color Code" href="https://www.ece.ucf.edu/labs/EEL3123/appendix/standard-resistor-color-code/">III. Standard Resistor Color Code</a></li>
+</ul>
+</li>
+</ul></div>							</div>
+							<!--end of menu module-->
+							<div class="module widget-handle search-widget-handle hidden-xs hidden-sm">
+								<button class="search">
+									<i class="fa fa-search"></i>
+									<span class="title">Site Search</span>
+								</button>
+								<div class="function">
+									<form role="search" method="get" class="search-form" action="https://www.ece.ucf.edu/labs/EEL3123/">
+		<div class="search-form-wrapper">
+			<input type="search" class="search-field" placeholder="Search …" name="s">
+			<button type="submit" class="search-submit">
+				<span class="screen-reader-text">Search</span>
+				<i class="fas fa-search" aria-hidden="true"></i>
+			</button>
+		</div>
+	</form>								</div>
+							</div>
+						</div>
+						<!--end of module group-->
+					</div>
+				</div>
+			</nav><!-- #site-navigation -->
+		</div>
+	</header><!-- #masthead -->
+	<div id="content" class="main-container">
+					<div class="header-callout">
+						
+		<!-- Rank Math SEO's Breadcrumb Function -->
+							</div>
+		
+		<section class="content-area  pt0 ">
+			<div id="main" class="container" role="main">
+	<div class="row">
+				<div id="primary" class="col-md-8 mb-xs-24 sidebar-right">
+																<article id="post-87" class="post-87 page type-page status-publish hentry">
+	<header class="entry-header">
+				<h1 class="entry-title">#4: First and Second Order Circuits</h1>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<h2>Objectives</h2>
+<ul>
+<li>To study the step response of first order circuits.</li>
+<li>To understand the concept of the time constant.</li>
+<li>To study the step response of second order circuits.</li>
+<li>To understand the difference between overdamped, critically damped and underdamped responses.</li>
+<li>To determine theoretically and experimentally the damped natural frequency in the under-damped case.</li>
+</ul>
+<h2>Equipment</h2>
+<ul>
+<li>Breadboard</li>
+<li>Function generator</li>
+<li>Oscilloscope</li>
+<li>Digital multimeter (DMM)</li>
+</ul>
+<h2>Background</h2>
+<h3>A.    First Order Circuits</h3>
+<p>First-order transient circuits are described by a first order 
+differential equation. First-order circuits contain a resistor and only 
+one type of storage element, either an inductor or a capacitor, i.e. RL 
+or RC circuits.</p>
+<p>For a step voltage/current source input, the output can be expressed as</p>
+<p style="text-align: center;"><img decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-80215ae2a1a4d513185a69df0995ee06_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="X(t)=X(\infty)+[X(0)-X(\infty)] \times e^{-{t \over \tau}}" title="Rendered by QuickLaTeX.com" height="23" width="297" style="vertical-align: -5px;"></p>
+<p>Where, <img decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-6df8f6cd344cd92c97127cda8d84049b_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="X(0)" title="Rendered by QuickLaTeX.com" height="18" width="38" style="vertical-align: -4px;"> is the circuit response at <img decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-095ec4e668d44957abf895379d06cf66_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="t = 0" title="Rendered by QuickLaTeX.com" height="12" width="39" style="vertical-align: 0px;">, and <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-20690a2f38eb2578b12f56f20f20f54c_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="X(\infty)" title="Rendered by QuickLaTeX.com" height="18" width="47" style="vertical-align: -4px;"> is the response at <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-d8d05cc90555da54b121a358326c8460_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="t =\infty" title="Rendered by QuickLaTeX.com" height="12" width="47" style="vertical-align: 0px;">. The parameter <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-13197f4653c1fd428a291609eb1e3b87_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\tau" title="Rendered by QuickLaTeX.com" height="8" width="10" style="vertical-align: 0px;">&nbsp;is called time constant of the circuit and gives the time required for the response (i) to rise from zero to 63% (or <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-86ca5d90f41654557457b4864ceb494d_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="1- {1 \over e}" title="Rendered by QuickLaTeX.com" height="22" width="38" style="vertical-align: -6px;">) of its final steady value as shown in Figure 4 – 1 (a), or (ii) to fall to 37% (or <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-699ddcd8b87c93caed35a478ac5e47e1_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="{1 \over e}" title="Rendered by QuickLaTeX.com" height="22" width="7" style="vertical-align: -6px;">) of its initial value as shown in Figure 4 – 1 (b). Therefore, the smaller the value of <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-13197f4653c1fd428a291609eb1e3b87_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\tau" title="Rendered by QuickLaTeX.com" height="8" width="10" style="vertical-align: 0px;">, the faster the circuit response is.</p>
+<p>For a RC circuit</p>
+<p style="text-align: center;"><span class="katex-eq katex-rendered" data-katex-display="false"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="black"><mi>τ</mi><mo>=</mo><mi>R</mi><mo>×</mo><mi>C</mi></mstyle></mrow><annotation encoding="application/x-tex">\color{black}\tau = R \times C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span style="margin-right: 0.1132em; color: black;" class="mord mathnormal">τ</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel" style="color: black;">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.7667em; vertical-align: -0.0833em;"></span><span style="margin-right: 0.0077em; color: black;" class="mord mathnormal">R</span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin" style="color: black;">×</span><span class="mspace" style="margin-right: 0.2222em;"></span></span><span class="base"><span class="strut" style="height: 0.6833em;"></span><span style="margin-right: 0.0715em; color: black;" class="mord mathnormal">C</span></span></span></span></span></p>
+<p>For a RL circuit</p>
+<p style="text-align: center;"><span class="katex-eq katex-rendered" data-katex-display="false"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="black"><mi>τ</mi><mo>=</mo><mfrac><mi>L</mi><mi>R</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\color{black}\tau = {L \over R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span style="margin-right: 0.1132em; color: black;" class="mord mathnormal">τ</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel" style="color: black;">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 1.2173em; vertical-align: -0.345em;"></span><span class="mord" style="color: black;"><span class="mord" style="color: black;"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.8723em;"><span class="" style="top: -2.655em;"><span class="pstrut" style="height: 3em;"></span><span class="sizing reset-size6 size3 mtight" style="color: black;"><span class="mord mtight" style="color: black;"><span style="margin-right: 0.0077em; color: black;" class="mord mathnormal mtight">R</span></span></span></span><span class="" style="top: -3.23em;"><span class="pstrut" style="height: 3em;"></span><span class="frac-line" style="color: black; border-bottom-width: 0.04em;"></span></span><span class="" style="top: -3.394em;"><span class="pstrut" style="height: 3em;"></span><span class="sizing reset-size6 size3 mtight" style="color: black;"><span class="mord mtight" style="color: black;"><span class="mord mathnormal mtight" style="color: black;">L</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.345em;"><span class=""></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></span></p>
+<p>Applying the equations above, the voltage responses across the capacitor and the resistor in Figure 4-1 can be written as:</p>
+<p style="text-align: center;"><img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-91404ffec16e36e029354927566fae0d_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="V_C(t)=E(1-e^{-{t \over RC}})\text{, for }t \ge 0" title="Rendered by QuickLaTeX.com" height="22" width="243" style="vertical-align: -4px;"></p>
+<p style="text-align: center;"><img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-0f46b5b3ae685e1c1a58746820e05b14_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="V_R(t)=Ee^{-{t \over RC}} \text{, for }t \ge 0" title="Rendered by QuickLaTeX.com" height="22" width="198" style="vertical-align: -4px;"></p>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-243 aligncenter" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure4-1-300x164_002.png" alt="" width="500" height="273" srcset="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure4-1-300x164.png 300w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure4-1-768x420.png 768w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure4-1-1024x560.png 1024w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure4-1.png 1968w" sizes="auto, (max-width: 500px) 100vw, 500px"> <img loading="lazy" decoding="async" class="alignnone wp-image-244 aligncenter" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure4-1a-300x206_002.png" alt="" width="438" height="301" srcset="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure4-1a-300x206.png 300w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure4-1a-768x526.png 768w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure4-1a-1024x701.png 1024w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure4-1a.png 1886w" sizes="auto, (max-width: 438px) 100vw, 438px"> <img loading="lazy" decoding="async" class="alignnone wp-image-245 aligncenter" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure4-1b-300x208_002.png" alt="" width="437" height="303" srcset="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure4-1b-300x208.png 300w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure4-1b-768x534.png 768w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure4-1b-1024x712.png 1024w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure4-1b.png 1862w" sizes="auto, (max-width: 437px) 100vw, 437px"></p>
+<p style="text-align: center;"><strong>Figure 4 – 1 A first order circuit and its responses. (a) voltage over the capacitor; (b) voltage over the resistor.</strong></p>
+<h3>B.    Second Order Circuits</h3>
+<p>Second-order circuits are RLC circuits that contain two energy 
+storage elements. They can be represented by a second-order differential
+ equation. A characteristic equation, which is derived from the 
+governing differential equation, is often used to determine the natural 
+response of the circuit. The characteristic equation usually takes the 
+form of a quadratic equation, and it has two roots s<sub>1</sub> and s<sub>2</sub>.</p>
+<p style="text-align: center;"><img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-172ed151e9ed97cf2b34204148af48c1_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="a_2s^2+a_1s+a_1=0" title="Rendered by QuickLaTeX.com" height="19" width="151" style="vertical-align: -4px;"></p>
+<p style="text-align: center;"><img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-5b1a856762bf5f3674014172c1bdd9ca_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="s_1={-a_1+\sqrt{a_1^2-4a_2a_0} \over 2a_2}" title="Rendered by QuickLaTeX.com" height="32" width="152" style="vertical-align: -8px;"></p>
+<p style="text-align: center;"><img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-63e63332dbc72eee1e8c96a72fb13623_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="s_1={-a_1-\sqrt{a_1^2-4a_2a_0} \over 2a_2}" title="Rendered by QuickLaTeX.com" height="32" width="152" style="vertical-align: -8px;"></p>
+<p>When these roots are rewritten as,</p>
+<p style="text-align: center;"><img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-9c715bfe926b46d0fe56cc8ec0a5dbce_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="s_1=- \alpha+\sqrt{\alpha^2-\omega_0^2}" title="Rendered by QuickLaTeX.com" height="22" width="165" style="vertical-align: -6px;"></p>
+<p style="text-align: center;"><img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-d250157251193a2763edf46bc79f9f67_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="s_2=- \alpha-\sqrt{\alpha^2-\omega_0^2}" title="Rendered by QuickLaTeX.com" height="22" width="165" style="vertical-align: -6px;"></p>
+<p>then the natural response of the circuit is determined by:</p>
+<ul>
+<li><img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-afe21b5b1722b5b150bc3346e86ed640_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\alpha^2 &gt; w_0^2" title="Rendered by QuickLaTeX.com" height="20" width="63" style="vertical-align: -5px;">, there are two real and distinct roots <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-3998a7ead38819fd05930ac99ab5ca9f_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\to" title="Rendered by QuickLaTeX.com" height="11" width="17" style="vertical-align: -1px;"> Overdamped, as shown in Figure 4 – 2 (a) and (d).</li>
+<li><img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-554b89f38272786e769c973ffffa8930_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\alpha^2 = w_0^2" title="Rendered by QuickLaTeX.com" height="20" width="63" style="vertical-align: -5px;">, there are two real equal roots <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-3998a7ead38819fd05930ac99ab5ca9f_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\to" title="Rendered by QuickLaTeX.com" height="11" width="17" style="vertical-align: -1px;"> Critically damped, as shown in Figure 4 – 2 (b) and (e).</li>
+<li><img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-f735988ddb7fa9fc568960165b27ee2c_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\alpha^2 &lt; w_0^2" title="Rendered by QuickLaTeX.com" height="20" width="63" style="vertical-align: -5px;">, there are two complex roots <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-3998a7ead38819fd05930ac99ab5ca9f_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\to" title="Rendered by QuickLaTeX.com" height="11" width="17" style="vertical-align: -1px;"> Underdamped, as shown in Figure 4 – 2 (c) and (f).</li>
+</ul>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-251" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure5-1ad-300x97_002.png" alt="" width="649" height="210" srcset="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure5-1ad-300x97.png 300w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure5-1ad-768x248.png 768w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure5-1ad-1024x331.png 1024w" sizes="auto, (max-width: 649px) 100vw, 649px"><br>
+<img loading="lazy" decoding="async" class="alignnone wp-image-252" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure5-1be-300x99_002.png" alt="" width="652" height="215" srcset="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure5-1be-300x99.png 300w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure5-1be-768x253.png 768w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure5-1be-1024x338.png 1024w" sizes="auto, (max-width: 652px) 100vw, 652px"><br>
+<img loading="lazy" decoding="async" class="alignnone wp-image-253" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure5-1cf-300x100_002.png" alt="" width="651" height="217" srcset="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure5-1cf-300x100.png 300w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure5-1cf-768x256.png 768w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure5-1cf-1024x341.png 1024w" sizes="auto, (max-width: 651px) 100vw, 651px"></p>
+<p style="text-align: center;"><strong>Figure 4 – 2 Second order circuits natural responses</strong></p>
+<h2 style="text-align: left;">Preparation</h2>
+<h3>A.    First Order Circuits</h3>
+<p>Figure 4 – 3 and Figure 4 – 4 show various RC and RL circuits. For all circuits, R = 1 kΩ, C = 0.1 uF, and L = 100 mH.</p>
+<ol>
+<li>For the circuits in Figure 4 – 3, derive the analytical expression for&nbsp;<img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-4e24d74ee3ebf96630fac7858f027548_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="V_{out}(t)" title="Rendered by QuickLaTeX.com" height="18" width="50" style="vertical-align: -4px;"> given that <span class="katex-eq katex-rendered" data-katex-display="false"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="black"><mi>E</mi></mstyle></mrow><annotation encoding="application/x-tex"> \color{black}E </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span style="margin-right: 0.0576em; color: black;" class="mord mathnormal">E</span></span></span></span></span> is a constant. Sketch or plot <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-4e24d74ee3ebf96630fac7858f027548_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="V_{out}(t)" title="Rendered by QuickLaTeX.com" height="18" width="50" style="vertical-align: -4px;"> for each circuit.</li>
+<li>For the circuits in Figure 4 – 4, <span class="katex-eq katex-rendered" data-katex-display="false"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="black"><msub><mi>V</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">\color{black}V_{in}(t)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord" style="color: black;"><span style="margin-right: 0.2222em; color: black;" class="mord mathnormal">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3117em;"><span class="" style="top: -2.55em; margin-left: -0.2222em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight" style="color: black;"><span class="mord mtight" style="color: black;"><span class="mord mathnormal mtight" style="color: black;">in</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span><span class="mopen" style="color: black;">(</span><span class="mord mathnormal" style="color: black;">t</span><span class="mclose" style="color: black;">)</span></span></span></span></span> is a symmetric square wave input with amplitude <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-5c7812fc5ceb9be76dffea670cc9215e_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\pm E" title="Rendered by QuickLaTeX.com" height="12" width="28" style="vertical-align: 0px;"> and period <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-2a16b84e92a3361965bf90060e2f1336_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="T_S=10 \times \tau" title="Rendered by QuickLaTeX.com" height="15" width="93" style="vertical-align: -3px;">. Sketch or plot <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-4e24d74ee3ebf96630fac7858f027548_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="V_{out}(t)" title="Rendered by QuickLaTeX.com" height="18" width="50" style="vertical-align: -4px;"> for each circuit using superposition and the hint below. Show at least three cycles.</li>
+<li>For the circuit in Figure 4 – 4 (d), with <span class="katex-eq katex-rendered" data-katex-display="false"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="black"><msub><mi>V</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">\color{black}V_{in}(t)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord" style="color: black;"><span style="margin-right: 0.2222em; color: black;" class="mord mathnormal">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3117em;"><span class="" style="top: -2.55em; margin-left: -0.2222em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight" style="color: black;"><span class="mord mtight" style="color: black;"><span class="mord mathnormal mtight" style="color: black;">in</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span><span class="mopen" style="color: black;">(</span><span class="mord mathnormal" style="color: black;">t</span><span class="mclose" style="color: black;">)</span></span></span></span></span>
+ remains unchanged, sketch or plot the voltage across the inductor. Show
+ at least three cycles. Compare this voltage waveform to the one 
+obtained from the circuit in Figure 4 – 4 (c). What do you observe? Why?</li>
+</ol>
+<p><strong>Hint:</strong> the square wave can be broken up into a series
+ of step voltage waveforms with alternating polarities. Each of these 
+step voltage inputs generates an output, and the total output response 
+is the summation of all the individual outputs.</p>
+<p><img loading="lazy" decoding="async" class=" wp-image-246 aligncenter" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure4-2-300x183_002.png" alt="" width="653" height="398" srcset="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure4-2-300x183.png 300w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure4-2-768x469.png 768w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure4-2-1024x625.png 1024w" sizes="auto, (max-width: 653px) 100vw, 653px"></p>
+<p style="text-align: center;"><strong>Figure 4 – 3  First order circuits with step input voltage</strong></p>
+<p><img loading="lazy" decoding="async" class=" wp-image-247 aligncenter" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure4-3-300x184_002.png" alt="" width="651" height="400" srcset="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure4-3-300x184.png 300w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure4-3-1024x627.png 1024w" sizes="auto, (max-width: 651px) 100vw, 651px"></p>
+<p style="text-align: center;"><strong>Figure 4 – 4  First order circuits with square wave input</strong></p>
+<h3>B.    Second Order Circuits</h3>
+<p>Figure 4 – 5 and Figure 4 – 6 show various 2nd order circuits. For all circuits, C = 0.01 uF and L = 100 mH.</p>
+<ol>
+<li>For both circuits in Figure 4 – 5, <span class="katex-eq katex-rendered" data-katex-display="false"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="black"><mi>E</mi></mstyle></mrow><annotation encoding="application/x-tex"> \color{black}E </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span style="margin-right: 0.0576em; color: black;" class="mord mathnormal">E</span></span></span></span></span> is a constant. Write down the characteristic equation. Also, calculate the resistance range for R for the following cases.
+<ol>
+<li>Over-damped response</li>
+<li>Critically damped response</li>
+<li>Under-damped response</li>
+</ol>
+</li><li>For the circuit in Figure 4 – 5 (a), plot or sketch the response <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-4e24d74ee3ebf96630fac7858f027548_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="V_{out}(t)" title="Rendered by QuickLaTeX.com" height="18" width="50" style="vertical-align: -4px;"> when the resistor has the following resistance values.
+<ol>
+<li>R = 22 kΩ</li>
+<li>R = 6.3 kΩ</li>
+<li>R = 2.2 kΩ</li>
+</ol>
+</li><li>For the circuit in Figure 4 – 5 (b), plot or sketch the response <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-4e24d74ee3ebf96630fac7858f027548_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="V_{out}(t)" title="Rendered by QuickLaTeX.com" height="18" width="50" style="vertical-align: -4px;"> when the resistor has the following resistance values.
+<ol>
+<li>R = 680 Ω</li>
+<li>R = 1.6 kΩ</li>
+<li>R = 4.7 kΩ</li>
+</ol>
+</li><li>For both circuits in Figure 4 – 6, <span class="katex-eq katex-rendered" data-katex-display="false"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="black"><msub><mi>V</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">\color{black}V_{in}(t)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord" style="color: black;"><span style="margin-right: 0.2222em; color: black;" class="mord mathnormal">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3117em;"><span class="" style="top: -2.55em; margin-left: -0.2222em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight" style="color: black;"><span class="mord mtight" style="color: black;"><span class="mord mathnormal mtight" style="color: black;">in</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span><span class="mopen" style="color: black;">(</span><span class="mord mathnormal" style="color: black;">t</span><span class="mclose" style="color: black;">)</span></span></span></span></span>
+ is a symmetric square wave input with a frequency of 400 Hz and an 
+amplitude of 4 V. Set R = 470 Ω for the circuit in Figure 4 – 6 (a) and R
+ = 22 kΩ for the circuit in Figure 4 – 6 (b).
+<ol>
+<li>Calculate α, ω<sub>o</sub>, and ω<sub>d</sub>.</li>
+<li>Plot or sketch the output voltage, <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-4e24d74ee3ebf96630fac7858f027548_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="V_{out}(t)" title="Rendered by QuickLaTeX.com" height="18" width="50" style="vertical-align: -4px;">.</li>
+</ol>
+</li></ol>
+<p><img loading="lazy" decoding="async" class="wp-image-254 aligncenter" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure5-2-300x78_002.png" alt="" width="700" height="182" srcset="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure5-2-300x78.png 300w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure5-2-768x201.png 768w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure5-2-1024x268.png 1024w" sizes="auto, (max-width: 700px) 100vw, 700px"></p>
+<p style="text-align: center;"><strong>Figure 4 – 5 Second order circuits with step input voltage</strong></p>
+<p><img loading="lazy" decoding="async" class="wp-image-255 aligncenter" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure5-3-300x74_002.png" alt="" width="702" height="173" srcset="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure5-3-300x74.png 300w, %234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/figure5-3-1024x254.png 1024w" sizes="auto, (max-width: 702px) 100vw, 702px"></p>
+<p style="text-align: center;"><strong>Figure 4 – 6 Second order circuits with square wave input</strong></p>
+<h2>Simulation</h2>
+<p>Perform the following circuit simulations using a circuit simulator.</p>
+<ol>
+<li>Build and simulate the circuits in Figure 4 – 4. Set the input voltage to <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-b33ccfd383bee644e515d219b2d9bd12_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt=" \pm 5V" title="Rendered by QuickLaTeX.com" height="13" width="37" style="vertical-align: 0px;"> with a frequency of 1 kHz. Display both <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-ede73a07f893cbca19785539e16d78a3_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="V_{in}(t)" title="Rendered by QuickLaTeX.com" height="18" width="43" style="vertical-align: -4px;"> and <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-4e24d74ee3ebf96630fac7858f027548_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="V_{out}(t)" title="Rendered by QuickLaTeX.com" height="18" width="50" style="vertical-align: -4px;"> on the oscilloscope. Compare the results with the plots from PREPARATION.</li>
+<li>For the circuit in Figure 4 – 4 (d), with the input voltage remains 
+unchanged, display the voltage across the inductor. Compare this voltage
+ waveform to the one obtained from the circuit in Figure 4 – 4 (c). What
+ do you observe? Why?</li>
+<li>Build and simulate the circuits in Figure 4 – 6. Set the input voltage to <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-99b9b0dc445869059edf87c2a07d9464_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\pm 4V" title="Rendered by QuickLaTeX.com" height="13" width="37" style="vertical-align: -1px;"> with a frequency of 400 Hz. Display both <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-ede73a07f893cbca19785539e16d78a3_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="V_{in}(t)" title="Rendered by QuickLaTeX.com" height="18" width="43" style="vertical-align: -4px;"> and <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-4e24d74ee3ebf96630fac7858f027548_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="V_{out}(t)" title="Rendered by QuickLaTeX.com" height="18" width="50" style="vertical-align: -4px;"> on the oscilloscope. Compare the results with the plots from PREPARATION.</li>
+</ol>
+<h2>First Order Circuits Experiment</h2>
+<p>Construct all four circuits in Figure 4 – 4. Use the same component 
+values as in the PREPARATION and the same input settings used in the 
+SIMULATION. Complete the measurements described below. Refer to 
+Experiment #3 for instructions on how to use function generator and 
+oscilloscope.</p>
+<h3>A. Response to square wave input</h3>
+<ol>
+<li>Measure both the input and the output using the oscilloscope. 
+Connect Ch1 to the input and Ch2 to the output so that both waveforms 
+are displayed on the screen. Compare these waveforms to the results from
+ PREPARATION and SIMULATION. </li>
+<li>For the circuit in Figure 4 – 4 (d), measure the voltage across the 
+inductor using the oscilloscope. Since any voltage measured by the probe
+ used in the lab is with respect to the ground, the voltage across the 
+inductor has to be measured indirectly. This measurement can be obtained
+ using the ‘Math’ button on the oscilloscope. Compare this voltage 
+waveform to the one obtained from the circuit in Figure 4 – 4 (c). What 
+do you observe? Why?</li>
+<li>Save the screen images to a USB drive using the ‘Save Load’ button.</li>
+</ol>
+<h3>B. Time constant measurement</h3>
+<ol>
+<li>Turn off the input (Channel 1) by pressing the channel number button. Now only the output is displayed on the screen.</li>
+<li>Zoom in on the output curve on the oscilloscope such that a large 
+portion (at least half a cycle) of the rise/drop of a cycle is displayed
+ on the screen. Consider the rise and drop over one half cycle only for 
+each circuit. Use cursors to determine the maximum voltage difference E 
+for the output. The time it takes for the output to rise from the 
+minimum value to 63% of E or to drop from the maximum to 37% of E is the
+ time constant <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-13197f4653c1fd428a291609eb1e3b87_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\tau" title="Rendered by QuickLaTeX.com" height="8" width="10" style="vertical-align: 0px;"> of the circuit. Record this time constant <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-13197f4653c1fd428a291609eb1e3b87_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\tau" title="Rendered by QuickLaTeX.com" height="8" width="10" style="vertical-align: 0px;"> for each circuit.</li>
+</ol>
+<h2>Second Order Circuits Experiment</h2>
+<p>On the function generator use the same square wave input settings as in SIMULATION. Build both circuits shown in Figure 4 – 6.</p>
+<h3>A. Natural responses</h3>
+<ol>
+<li>Measure the output voltage <img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-4e24d74ee3ebf96630fac7858f027548_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="V_{out}(t)" title="Rendered by QuickLaTeX.com" height="18" width="50" style="vertical-align: -4px;"> for the following six cases.</li>
+<ol>
+<li>R = 22 kΩ in the circuit of Figure 4 – 6 (a)</li>
+<li>R = 6.3 kΩ in the circuit of Figure 4 – 6 (a)</li>
+<li>R = 2.2 kΩ in the circuit of Figure 4 – 6 (a)</li>
+<li>R = 680 Ω in the circuit of Figure 4 – 6 (b)</li>
+<li>R = 1.6 kΩ in the circuit of Figure 4 – 6 (b)</li>
+<li>R = 4.7 kΩ in the circuit of Figure 4 – 6 (b)</li>
+</ol>
+<li>On the oscilloscope, connect Ch1 to the input and Ch2 to the output 
+so that both the input and the output are displayed on the screen.</li>
+<li>For each case, save the screen image with the associated measurements for both the input and the output on to a USB drive.</li>
+<li>For each case, indicate if the output response is overdamped, critically damped or underdamped.</li>
+</ol>
+
+<h3>B. Damped natural frequency measurement</h3>
+<ol>
+<li>Set R = 470 Ω for the circuit in Figure 4 – 6 (a) and R = 22 kΩ for 
+the circuit in Figure 4 – 6 (b). Measure and save the screen image for 
+both the input and the output, and compare them with the results from 
+PREPARATION and SIMULATION.</li>
+<li>Zoom in on the output curve so that at least two whole oscillations 
+(ripples) of the output from the beginning of an output cycle are 
+displayed. Use the cursors to measure the time period T<sub>d</sub> between the first two peaks (or between two zero phases). ω<sub>d</sub> is calculated using:</li>
+</ol>
+<p style="text-align: center;"><img loading="lazy" decoding="async" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/quicklatex.com-e67a4e3a2826b57f3174e6bdc40eaee5_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\omega_d={2 \cdot \pi \over T_d}" title="Rendered by QuickLaTeX.com" height="24" width="65" style="vertical-align: -8px;"></p>
+<p><!-- 
+
+<h2>Report</h2>
+
+
+Prepare your report as per the guidelines given in APPENDIX III. --></p>
+	</div><!-- .entry-content -->
+		<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+		</div><!-- #primary -->
+		
+
+<aside id="secondary" class="widget-area col-md-4" role="complementary">
+	<div id="pages-3" class="widget widget_pages"><h2 class="widget-title">Table of Contents</h2>
+			<ul>
+				<li class="page_item page-item-12 page_item_has_children"><a href="https://www.ece.ucf.edu/labs/EEL3123/">Introduction</a>
+<ul class="children">
+	<li class="page_item page-item-65"><a href="https://www.ece.ucf.edu/labs/EEL3123/table-of-contents/safety-rules-operating-procedures/">Safety Rules &amp; Operating Procedures</a></li>
+	<li class="page_item page-item-62"><a href="https://www.ece.ucf.edu/labs/EEL3123/table-of-contents/laboratory-safety-information/">Laboratory Safety Information</a></li>
+	<li class="page_item page-item-73"><a href="https://www.ece.ucf.edu/labs/EEL3123/table-of-contents/troubleshooting-hints/">Troubleshooting Hints</a></li>
+</ul>
+</li>
+<li class="page_item page-item-77 page_item_has_children current_page_ancestor current_page_parent"><a href="https://www.ece.ucf.edu/labs/EEL3123/experiments/">Experiments</a>
+<ul class="children">
+	<li class="page_item page-item-81"><a href="https://www.ece.ucf.edu/labs/EEL3123/experiments/experiment-1-dc-measurements/">#1: DC Measurements</a></li>
+	<li class="page_item page-item-85"><a href="https://www.ece.ucf.edu/labs/EEL3123/experiments/experiment-2-network-analysis-methods/">#2: Circuit Analysis Techniques</a></li>
+	<li class="page_item page-item-83"><a href="https://www.ece.ucf.edu/labs/EEL3123/experiments/experiment-3-ac-measurements/">#3: AC Measurements</a></li>
+	<li class="page_item page-item-87 current_page_item"><a href="https://www.ece.ucf.edu/labs/EEL3123/experiments/expriment-4-first-order-circuits/" aria-current="page">#4: First and Second Order Circuits</a></li>
+</ul>
+</li>
+<li class="page_item page-item-566 page_item_has_children"><a href="https://www.ece.ucf.edu/labs/EEL3123/projects/">Projects</a>
+<ul class="children">
+	<li class="page_item page-item-570"><a href="https://www.ece.ucf.edu/labs/EEL3123/projects/project-1/">Project #1 Thevenin’s Theorem</a></li>
+	<li class="page_item page-item-844"><a href="https://www.ece.ucf.edu/labs/EEL3123/projects/project-2-circuit-design-1/">Project #2 Circuit Design #1</a></li>
+	<li class="page_item page-item-973"><a href="https://www.ece.ucf.edu/labs/EEL3123/projects/circuit-design-part-a/">Circuit Design Part A</a></li>
+	<li class="page_item page-item-979"><a href="https://www.ece.ucf.edu/labs/EEL3123/projects/circuit-design-part-b/">Circuit Design Part B</a></li>
+	<li class="page_item page-item-995"><a href="https://www.ece.ucf.edu/labs/EEL3123/projects/circuit-design-part-c/">Circuit Design Part C</a></li>
+	<li class="page_item page-item-1216"><a href="https://www.ece.ucf.edu/labs/EEL3123/projects/project-5-ac-load-measurement/">Project #3 AC Load Measurement</a></li>
+	<li class="page_item page-item-867"><a href="https://www.ece.ucf.edu/labs/EEL3123/projects/project-4-circuit-element-identification/">Project #4 Circuit Element Identification</a></li>
+	<li class="page_item page-item-576"><a href="https://www.ece.ucf.edu/labs/EEL3123/projects/project-3-circuit-design-2/">Project #5 Circuit Design #2</a></li>
+</ul>
+</li>
+<li class="page_item page-item-101 page_item_has_children"><a href="https://www.ece.ucf.edu/labs/EEL3123/appendix/">Appendix</a>
+<ul class="children">
+	<li class="page_item page-item-1064"><a href="https://www.ece.ucf.edu/labs/EEL3123/appendix/i-lab-component/">I. Lab Component</a></li>
+	<li class="page_item page-item-106"><a href="https://www.ece.ucf.edu/labs/EEL3123/appendix/list-of-available-resistors-capacitors/">II. List of Available Resistors &amp; Capacitors</a></li>
+	<li class="page_item page-item-104"><a href="https://www.ece.ucf.edu/labs/EEL3123/appendix/standard-resistor-color-code/">III. Standard Resistor Color Code</a></li>
+</ul>
+</li>
+			</ul>
+
+			</div></aside><!-- #secondary -->
+	</div>
+
+</div><!-- #main -->
+</section><!-- section -->
+
+<div class="footer-callout">
+	</div>
+
+<footer id="colophon" class="site-footer footer bg-dark" role="contentinfo">
+	<div class="container footer-inner">
+		<div class="row">
+			
+
+<div class="footer-widget-area">
+			<div class="col-md-3 col-sm-6 footer-widget" role="complementary">
+			<div id="text-5" class="widget widget_text"><h2 class="widget-title">About</h2>			<div class="textwidget"><div class="page" title="Page 2">
+<div class="layoutArea">
+<div class="column">
+<p>Lab Manual Authors:<br>
+Dr. Parveen Wahid<br>
+Ms. Ya Shen<br>
+Dr. Chung Yong Chan</p>
+</div>
+<p>Project Assistant Producers:<br>
+Ethan Partidas<br>
+Mena Mishriky&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Ethan Fluhr&nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Isaiah 
+McCarty</p>
+<div class="column">
+<p>Webmasters:<br>
+Brandon Cuevas<br>
+Garett Goodale</p>
+<p>For questions and revision requests, please contact Chung Yong Chan at&nbsp;<a href="mailto:ChungYong.Chan@ucf.edu">chungyong.chan@ucf.edu</a>.</p>
+<p>Revised March 2023</p>
+</div>
+</div>
+</div>
+</div>
+		</div>		</div><!-- .widget-area .first -->
+	
+	
+	
+	</div>
+		</div>
+
+		<div class="row">
+			<div class="site-info col-sm-6">
+				<div class="copyright-text">
+									</div>
+				<div class="footer-credits">
+					Theme by <a href="https://colorlib.com/" target="_blank" rel="nofollow noopener" title="Colorlib">Colorlib</a> Powered by <a href="https://wordpress.org/" target="_blank" title="WordPress.org">WordPress</a>				</div>
+			</div><!-- .site-info -->
+			<div class="col-sm-6 text-right">
+							</div>
+		</div>
+	</div>
+
+	<a class="btn btn-sm fade-half back-to-top inner-link" href="#top"><i class="fa fa-angle-up"></i></a>
+</footer><!-- #colophon -->
+</div>
+</div><!-- #page -->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/labs/EEL3123/*"},{"not":{"href_matches":["/labs/EEL3123/wp-*.php","/labs/EEL3123/wp-admin/*","/labs/EEL3123/wp-content/uploads/*","/labs/EEL3123/wp-content/*","/labs/EEL3123/wp-content/plugins/*","/labs/EEL3123/wp-content/themes/shapely/*","/labs/EEL3123/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="zooom-js" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/jquery.magnify.js"></script>
+<script id="shapely-skip-link-focus-fix-js" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/skip-link-focus-fix.js"></script>
+<script id="flexslider-js" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/flexslider.min.js"></script>
+<script id="owl.carousel-js" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/owl.carousel.min.js"></script>
+<script id="imagesloaded-js" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/imagesloaded.min.js"></script>
+<script id="shapely-scripts-js-extra">
+var ShapelyAdminObject = {"sticky_header":"1"};
+//# sourceURL=shapely-scripts-js-extra
+</script>
+<script id="shapely-scripts-js" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/shapely-scripts.js"></script>
+<script id="katex-js" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/katex.min.js"></script>
+<script id="katex-render-js" src="%234_%20First%20and%20Second%20Order%20Circuits%20%E2%80%93%20EEL%203123%20Linear%20Circuits%20II%20Lab%20Manual_files/render.js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.ece.ucf.edu/labs/EEL3123/wp-includes/js/wp-emoji-release.min.js?ver=7.0"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://www.ece.ucf.edu/labs/EEL3123/wp-includes/js/wp-emoji-loader.min.js
+</script>
+    <script type="text/javascript">
+        jQuery( function( $ ) {
+
+            for (let i = 0; i < document.forms.length; ++i) {
+                let form = document.forms[i];
+				if ($(form).attr("method") != "get") { $(form).append('<input type="hidden" name="WxIBZPn" value="fJtNDoMC_HgQKE6" />'); }
+if ($(form).attr("method") != "get") { $(form).append('<input type="hidden" name="xnEhjKTMPeRsOWQ" value="9rD5.B801ZtV" />'); }
+            }
+
+            $(document).on('submit', 'form', function () {
+				if ($(this).attr("method") != "get") { $(this).append('<input type="hidden" name="WxIBZPn" value="fJtNDoMC_HgQKE6" />'); }
+if ($(this).attr("method") != "get") { $(this).append('<input type="hidden" name="xnEhjKTMPeRsOWQ" value="9rD5.B801ZtV" />'); }
+                return true;
+            });
+
+            jQuery.ajaxSetup({
+                beforeSend: function (e, data) {
+
+                    if (data.type !== 'POST') return;
+
+                    if (typeof data.data === 'object' && data.data !== null) {
+						data.data.append("WxIBZPn", "fJtNDoMC_HgQKE6");
+data.data.append("xnEhjKTMPeRsOWQ", "9rD5.B801ZtV");
+                    }
+                    else {
+                        data.data = data.data + '&WxIBZPn=fJtNDoMC_HgQKE6&xnEhjKTMPeRsOWQ=9rD5.B801ZtV';
+                    }
+                }
+            });
+
+        });
+    </script>
+	
+
+
+</body></html>
