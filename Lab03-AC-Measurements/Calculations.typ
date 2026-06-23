@@ -3,7 +3,8 @@
 #set heading(numbering: "1.A.1.a")
 #counter(heading).update(3)
 #heading(numbering: none, "Lab 3 Calculations")
-
+Malachy Crossan 5522964\
+Jacob Rosen 5534974
 == RMS Voltage calculation
 === Sine wave
 $
@@ -15,7 +16,7 @@ $
   \
   10 V times 1/2 &= V_"RMS" times sqrt(2)
   \
-  V_"RMS" = 5/sqrt(2) V approx 
+  V_"RMS" = 5/sqrt(2) V approx 3.54 V
 $
 === Square wave
 $
@@ -27,7 +28,7 @@ $
   \
   10 V times 1/2 &= V_"RMS"
   \
-  V_"RMS" = 5 V approx 
+  V_"RMS" = 5 V
 $
 === Triangle wave
 $
@@ -39,7 +40,7 @@ $
   \
   10 V times 1/2 &= V_"RMS" times sqrt(3)
   \
-  V_"RMS" = 5/sqrt(3) V approx 
+  V_"RMS" = 5/sqrt(3) V approx 2.89 V
 $
 == Period calculation
 === $100 "Hz"$
