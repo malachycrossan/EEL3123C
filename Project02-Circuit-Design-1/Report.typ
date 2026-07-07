@@ -3,7 +3,7 @@
 #show math.equation.where(block: true):  it => rect(it,radius: 1em, inset: 1em, fill: silver)
 #set math.equation(numbering: "Eq 1")
 #set heading(numbering: "1.A.1.a")
-#set page(height: auto)
+//#set page(height: auto)
 
 #counter(heading).update(2)
 #heading("Project 2 Circuit Design 1", numbering: none)
@@ -14,6 +14,7 @@
 )
 
 #outline()
+#pagebreak()
 == Part A
 === Objective
 #figure(image("Fig1.png"),caption: "Circuit Design Part A")
@@ -40,9 +41,9 @@ $<voltage-divider-formula>
 In order to satisfy the design requirements, we will choose $1 k Omega$ resistors for $R_1$ in both circuits. We will then choose $1 k Omega$ and $9 k Omega$ for $R_2$ in circuits A and B respectively. The resulting circuits are shown in @Circuit-A-PartA and @Circuit-B-PartA.
 
 #columns(2)[
-  #figure("placeholder",caption: "Circuit A") <Circuit-A-PartA>
+  #figure(image("CircuitA-PartA.png"),caption: "Circuit A") <Circuit-A-PartA>
   #colbreak()
-  #figure("placeholder",caption: "Circuit B") <Circuit-B-PartA>
+  #figure(image("CircuitB-PartA.png"),caption: "Circuit B") <Circuit-B-PartA>
 ]
 
 === Analysis Results
@@ -116,10 +117,30 @@ pt.savefig('PartAWaveform.svg')
 ][
 #image("PartAWaveform.svg")
 ]
+#pagebreak()
 === Simulation Results
+==== DC Simulation
+I set the input voltage to $1V$ and measured the output voltage at $R_2$ for the circuits in @Circuit-A-PartA and @Circuit-B-PartA.\
+#grid(columns:2,
+"Circuit A:",
+"Circuit B:",
+image("CircuitA-PartA-DC.pdf"),
+image("CircuitB-PartA-DC.pdf"),
+)
+#pagebreak()
+==== AC Simulation
+I set the input voltage to a $1V$ $1"kHz"$ square wave and measured the output voltage at $R_2$ for the circuits in@Circuit-A-PartA and @Circuit-B-PartA.\
+#align(center,image("AC.PNG", width: 40%))
+#grid(columns:2,
+"Circuit A:",
+"Circuit B:",
+image("CircuitA-PartA-AC.pdf"),
+image("CircuitB-PartA-AC.pdf"),
+)
 === Experimental Results
 === Results Comparison
 === Conclusion
+
 == Part B
 === Objective <PartBObjective>
 #figure(image("Fig2.png"),caption: "Cascaded circuits from part A")<fig2>
@@ -200,11 +221,21 @@ print(sol[0][4].subs(Ra1,50_000).subs(Rb1,10_000))
 
 This gives us the resistor values:
 - $R_"A1" = 50k Omega$
-- $R_"A2" = 50k Omega$
+- $R_"A2" = 100k Omega$
 - $R_"B1" = 10k Omega$
 - $R_"B2" = 90k Omega$
 
+#figure(image("CircuitAB-PartB.png"),caption: "Updated Circuit A and B (cascaded)") <Circuit-AB-PartB>
+
 === Simulation Results
+==== DC Simulation
+I set the input voltage to $1V$ and measured the output voltage at $R_B_2$ for the circuit in @Circuit-AB-PartB\
+#image("CircuitAB-PartB-DC.pdf")
+#pagebreak()
+==== AC Simulation
+I set the input voltage to a $1V$ $1"kHz"$ square wave and measured the output voltage at $R_2$ for the circuit in @Circuit-AB-PartB
+#align(center,image("AC.PNG", width: 40%))
+#image("CircuitAB-PartB-AC.pdf")
 === Experimental Results
 === Results Comparison
 === Conclusion
@@ -223,6 +254,8 @@ To achieve the design requirement, we used a voltage follower ($"gain"=1$) and a
 $ "Circuit A"->"Voltage Follower"->"Circuit B"->"Inverting Amp" $
 We then discovered that the inverting amplifier is loading Circuit B and affecting the output. So, we rearranged it as such:
 $ "Circuit A"->"Voltage Follower"->"Inverting Amp"->"Circuit B" $
+
+#figure(image("CircuitABC-PartC.png"), caption: "Updated Circuit A and B (cascaded) with voltage follower and inverting amplifier") <Circuit-ABC-PartC>
 
 === Analysis Results
 $
@@ -302,6 +335,14 @@ pt.savefig('PartCWaveform.svg')
 ```][#image("PartCWaveform.svg")]
 
 === Simulation Results
+==== DC Simulation
+I set the input voltage to $1V$ and measured the output voltage at $R_B_2$ for the circuit in @Circuit-ABC-PartC\
+#image("CircuitABC-PartC-DC.pdf")
+#pagebreak()
+==== AC Simulation
+I set the input voltage to a $1V$ $1"kHz"$ square wave and measured the output voltage at $R_2$ for the circuit in @Circuit-ABC-PartC
+#align(center,image("AC.PNG", width: 40%))
+#image("CircuitABC-PartC-AC.pdf")
 === Experimental Results
 === Results Comparison
 === Conclusion
