@@ -1,17 +1,62 @@
-// mip$python<ret>
+#let coverpage(title: str, author, class, due_date: datetime, last_modified: datetime) = [
+  #align(center, [
+  #v(6em)
+  #text(14pt, weight: "bold", title)
+  #v(2em)
+  #text(12pt, style: "italic", author.join(" & "))
+  #v(1em)
+  #text(style: "italic", class)
+  #v(1em)
+  #grid(
+    columns: 2,
+    gutter: 8pt,
+    "Due Date:", due_date.display(),
+    "Last modified:", last_modified.display(),
+  )
+])
+#pagebreak()
+]
+
+#set text(font: "Liberation Sans", size: 10pt)
+#set par(justify: false)
 #show raw.where(lang: "MATLAB"): it => rect(it, width: 100%, radius: .5em, inset: 1em,)
 #show math.equation.where(block: true):  it => rect(it,radius: 1em, inset: 1em, fill: silver)
 #set math.equation(numbering: "Eq 1")
 #set heading(numbering: "1.A.1.a")
-//#set page(height: auto)
-
-#counter(heading).update(2)
-#heading("Project 2 Circuit Design 1", numbering: none)
 #let mathHeading(content) = text(
   size: 15pt,
   fill: blue.darken(40%),
   content,
 )
+//#set page(height: auto)
+// 
+// Footer with "Page X of Y"
+#show: page.with(
+  footer: align(center)[#context[
+    Page #counter(page).display() of #counter(page).final().first()
+  ]],
+)
+
+#let author = (
+  "Malachy Crossan",
+  "Jacob Rosen",
+  )
+#let class = "EEL3123-C0013: Linear Circuits II"
+#let title = "Project 2: Circuit Design 1"
+#let description = ""
+#set document(author: author, title: title, description: description)
+
+#coverpage(
+  title: title,
+  author,
+  class,
+  due_date: datetime(year: 2026, month: 7, day: 7),
+  last_modified: datetime(year: 2026, month: 7, day: 7)
+)
+
+#counter(heading).update(2)
+//#heading("Project 2 Circuit Design 1", numbering: none)
+
 
 #outline()
 #pagebreak()
@@ -46,6 +91,7 @@ In order to satisfy the design requirements, we will choose $1 k Omega$ resistor
   #figure(image("CircuitB-PartA.png"),caption: "Circuit B") <Circuit-B-PartA>
 ]
 
+#pagebreak()
 === Analysis Results
 #columns(2)[
 ==== Circuit A
@@ -117,7 +163,6 @@ pt.savefig('PartAWaveform.svg')
 ][
 #image("PartAWaveform.svg")
 ]
-#pagebreak()
 === Simulation Results
 ==== DC Simulation
 I set the input voltage to $1V$ and measured the output voltage at $R_2$ for the circuits in @Circuit-A-PartA and @Circuit-B-PartA.\
@@ -127,7 +172,6 @@ I set the input voltage to $1V$ and measured the output voltage at $R_2$ for the
 image("CircuitA-PartA-DC.pdf"),
 image("CircuitB-PartA-DC.pdf"),
 )
-#pagebreak()
 ==== AC Simulation
 I set the input voltage to a $1V$ $1"kHz"$ square wave and measured the output voltage at $R_2$ for the circuits in@Circuit-A-PartA and @Circuit-B-PartA.\
 #align(center,image("AC.PNG", width: 40%))
@@ -138,18 +182,17 @@ image("CircuitA-PartA-AC.pdf"),
 image("CircuitB-PartA-AC.pdf"),
 )
 === Experimental Results
-#grid(columns:2, gutter: 1em,
+As seen below, the experimental results for the circuits show that the output voltage is $plus.minus 0.5 V$ and $plus.minus 0.9 V$ for Circuit A and B respectively, which are the expected values.
+#figure(grid(columns:2, gutter: 1em,
 "Circuit A:",
 "Circuit B:",
 image("CircuitA-PartA-Exp-Wav.jpg"),
 image("CircuitB-PartA-Exp-Wav.jpg"),
 image("CircuitA-PartA-Exp.jpg"),
 image("CircuitB-PartA-Exp.jpg"),
-)
-=== Results Comparison
+),caption: "Experimental Results for Circuit A and B")
 === Conclusion
-//TODO: Rewrite
-For Section 13, the required gains were KA=0.5, KB=0.9, and KC=6. In Part A, Circuit A and Circuit B were tested separately and behaved as expected. Circuit A reduced the input voltage by half, while Circuit B produced 90% of its input voltage. For a 1 V input, the expected outputs were approximately 0.5 V and 0.9 V, and the simulation/experimental values were close to these results.
+In Part A, Circuit A and Circuit B were tested separately and behaved as expected. Circuit A produced 50% of its input voltage, while Circuit B produced 90% of its input voltage. For a $1 V$ input, the expected outputs were $0.5 V$ and $0.9 V$, and the simulation and experimental values were close to these results.
 
 == Part B
 === Objective <PartBObjective>
@@ -238,18 +281,18 @@ This gives us the resistor values:
 #figure(image("CircuitAB-PartB.png"),caption: "Updated Circuit A and B (cascaded)") <Circuit-AB-PartB>
 
 === Simulation Results
+As seen below, the simulation results for the updated circuit show that the output voltage is $plus.minus 0.45 V$, which is the expected value.
+#figure(image("content.png"), caption: "Simulation Results for updated Circuit A and B (cascaded)")
 ==== DC Simulation
 I set the input voltage to $1V$ and measured the output voltage at $R_B_2$ for the circuit in @Circuit-AB-PartB\
 #image("CircuitAB-PartB-DC.pdf")
-#pagebreak()
 ==== AC Simulation
 I set the input voltage to a $1V$ $1"kHz"$ square wave and measured the output voltage at $R_2$ for the circuit in @Circuit-AB-PartB
 #align(center,image("AC.PNG", width: 40%))
 #image("CircuitAB-PartB-AC.pdf")
-=== Results Comparison
 === Conclusion
-//TODO: Rewrite
-In Part B, the original cascaded circuit did not produce the ideal expected value of KAKBVIA=0.45VIA. This result was expected because Circuit B loaded Circuit A, changing the effective resistance of Circuit A's voltage divider. Instead of maintaining exactly 0.5VIA, Circuit A's output dropped slightly due to the parallel resistance created by Circuit B. After redesigning the circuit with adjusted resistor values, the cascade produced the correct overall output of approximately 0.45VIA. This confirmed that loading must be considered when connecting circuits together.
+In Part B, the original cascaded circuit did not produce the value of $K_A times K_B times V_"IA" = 0.45 V_"IA"$. This result was expected because Circuit B loaded Circuit A, changing the effective resistance of Circuit A's voltage divider. Instead of maintaining exactly $0.5 V_"IA"$, Circuit A's output dropped slightly due to the parallel resistance created by Circuit B. After redesigning the circuit with adjusted resistor values, the cascade produced the correct overall output of approximately $0.45 V_"IA"$. This confirmed that loading must be considered when connecting circuits together.
+
 == Part C
 === Objective
 #image("Fig3.png")
@@ -349,30 +392,23 @@ pt.savefig('PartCWaveform.svg')
 ==== DC Simulation
 I set the input voltage to $1V$ and measured the output voltage at $R_B_2$ for the circuit in @Circuit-ABC-PartC\
 #image("CircuitABC-PartC-DC.pdf")
-#pagebreak()
 ==== AC Simulation
 I set the input voltage to a $1V$ $1"kHz"$ square wave and measured the output voltage at $R_2$ for the circuit in @Circuit-ABC-PartC
 #align(center,image("AC.PNG", width: 40%))
 #image("CircuitABC-PartC-AC.pdf")
 === Experimental Results
-#image("CircuitABC-PartC-Exp-Wav.jpg",width: 50%)
-#image("CircuitABC-PartC-Exp.jpg",width: 50%)
-=== Results Comparison
+As seen below, the experimental results for the updated circuit show that the output voltage is now $plus.minus 2.7 V_"IA"$, which is the expected value.
+#figure(grid(columns:2,
+image("CircuitABC-PartC-Exp-Wav.jpg",width: 100%),
+image("CircuitABC-PartC-Exp.jpg",width: 100%),
+),caption: "Experimental Results for Circuit A and B with voltage follower and inverting amplifier")
 === Conclusion
-In Part C, the final circuit used the Part A and Part B ideas along with op-amp stages to meet the full design requirement. The final desired relationship was: Vo=-2.7Vs
+In Part C, the final circuit used the Part A and Part B ideas along with op-amp stages to meet the full design requirement. The final desired relationship was: $V_o = -2.7 V_s$. The negative sign showed that the output was 180 degrees out of phase with the input. For the DC test with $V_s = 1 V$, the expected output was about $-2.7 V$. For the 1 kHz square-wave test, the output waveform was inverted and had a larger amplitude than the input. The simulation results matched the theoretical calculations closely, and the experimental results followed the same trend with only small differences.
+
 #heading(numbering: none, "Conclusion")
-When we finished the experiment, the results were what we expected/anticipated. Upon completion, we saw that circuits cannot always be connected together without affecting each other. Simple voltage dividers can change behavior when loaded by another circuit. It also showed why buffers and op-amps are useful in circuit design, as they help control gain, phase, and loading. By comparing theory, simulation, and experimental results, the lab confirmed the importance of designing, testing, and troubleshooting circuits carefully. Overall, this lab demonstrated how voltage dividers, loading effects, circuit redesign, and op-amp stages affect the final output of a circuit.
-The negative sign showed that the output was 180 degrees out of phase with the input. For the DC test with Vs=1V, the expected output was about −2.7V. For the 1 kHz square-wave test, the output waveform was inverted and had a larger amplitude than the input. The simulation results matched the theoretical calculations closely, and the experimental results followed the same trend with only small differences.
+When we finished the experiment, the results were what we anticipated. Upon completion, we saw that circuits cannot always be connected together without affecting each other. Simple voltage dividers can change behavior when loaded by another circuit. It also showed why buffers and op-amps are useful in circuit design, as they help control gain, phase, and loading. By comparing theory, simulation, and experimental results, the lab confirmed the importance of designing, testing, and troubleshooting circuits carefully. Overall, this lab demonstrated how voltage dividers, loading effects, circuit redesign, and op-amp stages affect the final output of a circuit.
+
 The results were mostly what we expected. The only major unexpected behavior came from the original Part B cascade, but after analyzing the circuit, it made sense because of the loading effect. The redesigned circuit fixed this issue by choosing resistor values that accounted for the input resistance of the next stage. Any small differences between theory, simulation, and the physical circuit were likely caused by resistor tolerance, breadboard contact resistance, op-amp limitations, oscilloscope/function generator settings, and minor measurement error.
 
 Some errors made during the lab included needing to carefully check resistor values, making sure all grounds were connected together, verifying the correct op-amp power supply pins, and confirming that the function generator was set to the correct amplitude, offset, and frequency. These issues were fixed by rechecking the circuit wiring, measuring resistor values, confirming the TL084 pinout, and comparing each node voltage step-by-step with the expected theoretical values. After troubleshooting, the circuit behavior matched the simulations and design requirements well.
-//TODO:Objectives and Tasks – define and outline explicitly the objectives and tasks
-//TODO:Dissection of Design – present your circuit design in a detailed, part-by-part analysis
-//TODO:– explain the reasonings behind your circuit design using circuit theory
-//TODO:– provide detailed circuit analysis and calculation to justify the circuit topology, component type and component value used in your design Simulation Results
-//TODO:– include screenshots of simulated circuits, results, etc.
-//TODO:Experimental Results – present your experimental results with clarity
-//TODO:– include oscilloscope figures, screenshots of DMM measurements, etc.
-//TODO:Results Comparison – compare simulation and experimental results
-//TODO:– explain discrepancies pertaining to concepts
-//TODO:Conclusions
+
