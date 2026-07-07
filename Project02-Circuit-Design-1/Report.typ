@@ -138,8 +138,18 @@ image("CircuitA-PartA-AC.pdf"),
 image("CircuitB-PartA-AC.pdf"),
 )
 === Experimental Results
+#grid(columns:2, gutter: 1em,
+"Circuit A:",
+"Circuit B:",
+image("CircuitA-PartA-Exp-Wav.jpg"),
+image("CircuitB-PartA-Exp-Wav.jpg"),
+image("CircuitA-PartA-Exp.jpg"),
+image("CircuitB-PartA-Exp.jpg"),
+)
 === Results Comparison
 === Conclusion
+//TODO: Rewrite
+For Section 13, the required gains were KA=0.5, KB=0.9, and KC=6. In Part A, Circuit A and Circuit B were tested separately and behaved as expected. Circuit A reduced the input voltage by half, while Circuit B produced 90% of its input voltage. For a 1 V input, the expected outputs were approximately 0.5 V and 0.9 V, and the simulation/experimental values were close to these results.
 
 == Part B
 === Objective <PartBObjective>
@@ -236,9 +246,10 @@ I set the input voltage to $1V$ and measured the output voltage at $R_B_2$ for t
 I set the input voltage to a $1V$ $1"kHz"$ square wave and measured the output voltage at $R_2$ for the circuit in @Circuit-AB-PartB
 #align(center,image("AC.PNG", width: 40%))
 #image("CircuitAB-PartB-AC.pdf")
-=== Experimental Results
 === Results Comparison
 === Conclusion
+//TODO: Rewrite
+In Part B, the original cascaded circuit did not produce the ideal expected value of KAKBVIA=0.45VIA. This result was expected because Circuit B loaded Circuit A, changing the effective resistance of Circuit A's voltage divider. Instead of maintaining exactly 0.5VIA, Circuit A's output dropped slightly due to the parallel resistance created by Circuit B. After redesigning the circuit with adjusted resistor values, the cascade produced the correct overall output of approximately 0.45VIA. This confirmed that loading must be considered when connecting circuits together.
 == Part C
 === Objective
 #image("Fig3.png")
@@ -344,9 +355,17 @@ I set the input voltage to a $1V$ $1"kHz"$ square wave and measured the output v
 #align(center,image("AC.PNG", width: 40%))
 #image("CircuitABC-PartC-AC.pdf")
 === Experimental Results
+#image("CircuitABC-PartC-Exp-Wav.jpg",width: 50%)
+#image("CircuitABC-PartC-Exp.jpg",width: 50%)
 === Results Comparison
 === Conclusion
+In Part C, the final circuit used the Part A and Part B ideas along with op-amp stages to meet the full design requirement. The final desired relationship was: Vo=-2.7Vs
+#heading(numbering: none, "Conclusion")
+When we finished the experiment, the results were what we expected/anticipated. Upon completion, we saw that circuits cannot always be connected together without affecting each other. Simple voltage dividers can change behavior when loaded by another circuit. It also showed why buffers and op-amps are useful in circuit design, as they help control gain, phase, and loading. By comparing theory, simulation, and experimental results, the lab confirmed the importance of designing, testing, and troubleshooting circuits carefully. Overall, this lab demonstrated how voltage dividers, loading effects, circuit redesign, and op-amp stages affect the final output of a circuit.
+The negative sign showed that the output was 180 degrees out of phase with the input. For the DC test with Vs=1V, the expected output was about −2.7V. For the 1 kHz square-wave test, the output waveform was inverted and had a larger amplitude than the input. The simulation results matched the theoretical calculations closely, and the experimental results followed the same trend with only small differences.
+The results were mostly what we expected. The only major unexpected behavior came from the original Part B cascade, but after analyzing the circuit, it made sense because of the loading effect. The redesigned circuit fixed this issue by choosing resistor values that accounted for the input resistance of the next stage. Any small differences between theory, simulation, and the physical circuit were likely caused by resistor tolerance, breadboard contact resistance, op-amp limitations, oscilloscope/function generator settings, and minor measurement error.
 
+Some errors made during the lab included needing to carefully check resistor values, making sure all grounds were connected together, verifying the correct op-amp power supply pins, and confirming that the function generator was set to the correct amplitude, offset, and frequency. These issues were fixed by rechecking the circuit wiring, measuring resistor values, confirming the TL084 pinout, and comparing each node voltage step-by-step with the expected theoretical values. After troubleshooting, the circuit behavior matched the simulations and design requirements well.
 //TODO:Objectives and Tasks – define and outline explicitly the objectives and tasks
 //TODO:Dissection of Design – present your circuit design in a detailed, part-by-part analysis
 //TODO:– explain the reasonings behind your circuit design using circuit theory
