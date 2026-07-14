@@ -26,11 +26,7 @@
 
         shellHook = ''
           echo "SymPy environment ready!"
-          ipython -c 'import sympy as sp
-          import numpy as np
-          import matplotlib.pyplot as pt
-          import scipy.signal as signal
-          ' -i
+          # ipython
         '';
       };
     };
