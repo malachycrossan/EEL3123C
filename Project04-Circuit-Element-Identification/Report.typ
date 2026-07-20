@@ -51,7 +51,7 @@
   author,
   class,
   due_date: datetime(year: 2026, month: 7, day: 21),
-  last_modified: datetime(year: 2026, month: 7, day: 21)
+  last_modified: datetime.today()
 )
 
 #counter(heading).update(4)
@@ -60,9 +60,9 @@
 #pagebreak()
 == Objective
 #figure(image("Identification.png"))
-Box\#4
 
 The objective of Project 4 was to determine. The unknown load could be a purely resistive, RL, or RC network. 
+*We were given Box \#4*
 
 Equipment:
 - Concealed AC load box (Unknown RR, RL, or RC)
@@ -86,9 +86,13 @@ A known reference resistor is connected in series with the concealed box so that
   - If $"phs"_Q > 0 degree$ Element Q is an inductor and $cal(Z)_Q = j omega L_Q/R_L$
   - If $"phs"_Q < 0 degree$ Element Q is a capacitor and $cal(Z)_Q = 1/(j omega C_Q)$
 
+
+#pagebreak()
 == Results
 
 With $V_"IN" = 2V_"PP" @ 1k"Hz"$, we measured the following RMS voltages with our DMM:
+#grid(columns:2, gutter: 1em,
+image("SCR0008.png"),image("SCR0012.png"),image("SCR0013.png"),image("SCR0006.png"))
 //SCR0008.BMP: V_IN
 //SCR00012.BMP: V_R
 //SCR00013.BMP: V_X
@@ -110,6 +114,7 @@ $
   &= 238mu A
 $
 
+#pagebreak()
 Next, we determine that the phase difference between $V_X$ and $V_R$ is $0 degree$.\
 And, the phase difference between $V_Y$ and $V_R$ is $15.48 degree$ leading.
 #figure(grid(columns:2, image("P03.PNG"),image("P07.PNG")),caption: [\ Left: Phase difference between $V_X$ and $V_R$ \ Right: Phase difference between $V_Y$ and $V_R$])
