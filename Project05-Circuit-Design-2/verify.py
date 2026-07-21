@@ -35,5 +35,5 @@ def verify(R2, C):
     plt.fill_between(frequencies, 0.8, 1.0, where=(frequencies >= 5000), color='green', alpha=0.3, interpolate=False)
     plt.show()
 
-verify(R2=620, C=0.47e-6)
-#verify(R2=300, C=10.0e-6)
+# verify(R2=620, C=0.47e-6)
+verify(R2=680, C=0.3e-6)
