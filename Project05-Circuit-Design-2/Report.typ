@@ -65,7 +65,14 @@
 #figure(
   image("Circuit-Model.png", width: 60%),
   caption: [Circuit Model],
-)
+)<Circuit-Model>
+
+Design, Analyze, Simulate, Build and Test a two port circuit. @Circuit-Model shows the desired circuit with a voltage input ($V_"IF"$) to the left and a voltage output ($V_O$) to the right.
+
+The voltage input is driven by a function generator. More specifically, an AC voltage source with an internal resistance of $50 Omega$).
+The voltage output is caused by a variable load, $600 Omega$ to $30k Omega$ and the resulting current.
+
+Our objective is to design a circuit that will attenuate a signal less than $200 Hz$ and pass a signal above $3k Hz$. More detailed specifications below (@Specs)
 
 #figure(table(columns:2, align: (left,center),
   $R_"min"$, $600 Omega$,
@@ -75,10 +82,12 @@
   $3k Hz <= f < 5k Hz$, $abs(V_O) >= 0.7 times abs(V_"IS")$,
   $5k Hz < f$, $abs(V_O) >= 0.8 times abs(V_"IS")$,
 ), caption: [Design Specs (Section 13) \ #text(size: 7pt)[$f$: Frequency\ $abs(V_"IS")$: Input Signal Voltage Amplitude \ $abs(V_O)$: Output Voltage Amplitude]]
-)
+)<Specs>
 
-#columns(2)[
-#text(size: 6pt)[
+@visual-specs is a bode plot of the frequency bands and their accepted gains for each range. Essentially, if the frequency response graph for all resistances lies entirely in these zones then it is an acceptable circuit.
+
+#figure(grid(columns: 2,
+text(size: 6pt)[
 ```python
 
 import matplotlib.pyplot as plt
@@ -95,12 +104,16 @@ plt.fill_between(frequencies, 0.7, 1.0, where=(frequencies >= 3000) & (frequenci
 plt.fill_between(frequencies, 0.8, 1.0, where=(frequencies >= 5000), color='green',)
 plt.savefig("Bounds.svg")
 
-```]#colbreak() #image("Bounds.svg")
-]
+```
+],
+image("Bounds.svg"),
+)
+)<visual-specs>
+
 == Plan
-// Using an initial design of a series Capacitor, cutoff freq moved around too much
-// Placed a resistor in parallel with load to stabilize the frequency
-// Show circuit without values
+Using an initial design of a series Capacitor, cutoff freq moved around too much
+Placed a resistor in parallel with load to stabilize the frequency
+Show circuit without values
 $
   abs(V_O/V_"IS") = R_P/sqrt((R_S + R_P)^2+(1/(2pi s C))^2)
 $
@@ -110,7 +123,7 @@ $
   \
   R_P_"Min" &= R_2 || 600 Omega
   \
-  R_P_"Max" &= R_2 || 3k Omega
+  R_P_"Max" &= R_2 || 30k Omega
 $
 
 #columns(2)[
