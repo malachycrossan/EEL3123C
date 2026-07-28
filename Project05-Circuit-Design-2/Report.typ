@@ -30,7 +30,7 @@
   content,
 )
 
-#set page(height: auto)
+//#set page(height: auto)
 #let Hz = "Hz"
 
 // Footer with "Page X of Y"
@@ -78,7 +78,7 @@ Our objective is to design a circuit that will attenuate a signal less than $200
   $R_"min"$, $600 Omega$,
   $R_"max"$, $30k Omega$,
   $1 Hz <= f <= 200 Hz$, $abs(V_O) <= 0.7 times abs(V_"IS")$,
-  $200 Hz < f < 3k Hz$, $?$, //TODO: write inferred condition
+  $200 Hz < f < 3k Hz$, $0 <= abs(V_O) <= 1.0 times abs(V_"IS")$,
   $3k Hz <= f < 5k Hz$, $abs(V_O) >= 0.7 times abs(V_"IS")$,
   $5k Hz < f$, $abs(V_O) >= 0.8 times abs(V_"IS")$,
 ), caption: [Design Specs (Section 13) \ #text(size: 7pt)[$f$: Frequency\ $abs(V_"IS")$: Input Signal Voltage Amplitude \ $abs(V_O)$: Output Voltage Amplitude]]
@@ -111,13 +111,15 @@ image("Bounds.svg"),
 )<visual-specs>
 
 == Plan
-Using an initial design of a series Capacitor, cutoff freq moved around too much
-Placed a resistor in parallel with load to stabilize the frequency
-Show circuit without values
-$
+Using an initial design of just a series Capacitor, the cutoff frequency changes too much with the load resistance. To stabilize the frequency, we placed a resistor in parallel with the load. This resistor is labeled $R_2$ in @circuit-design.
+
+
+
+/*$
   abs(V_O/V_"IS") = R_P/sqrt((R_S + R_P)^2+(1/(2pi s C))^2)
 $
-where
+where*/
+
 $
   R_P &= R_2 || R_L
   \
@@ -160,7 +162,14 @@ This gave us a range between $.229mu F$ and $1.405mu F$ assuming that all compon
 #colbreak() #figure(raw(lang: "python", read("calc.txt")), caption: [Possible values for $R_2$ and $C$])
 ]
 
-//TODO: Make look better
+However, neither the $620 Omega$ resistor nor the $470n F$ capacitor was available in the lab. We used a $680 Omega$ resistor and three $0.1 mu F$ capacitors in parallel instead.
+
+#figure(
+  image("Project05-KiCad/Circuit.PNG", width: 60%),
+  caption: [Circuit Design],
+) <circuit-design>
+
+The following code was used to verify if a Resistor and Capacitor pair would meet the design specifications.
 ```python
 
 import numpy as np
@@ -204,11 +213,11 @@ R2=620 ohm, C=0.470 uF
   Passband 5kHz    gain=0.8439  need >= 0.8  -> PASS
 Overall: PASS
 ```
-#image("Verify-620R-470nF.svg")
-#lorem(20) //TODO: as you can see all intermediate values of RL pass
+#figure(image("Verify-620R-470nF.svg"), caption: [Verify 620R & 470nF]) <620R-470nF>
+@620R-470nF above is the verification of the $620 Omega$ resistor and $470n F$ capacitor. The gain for all three conditions is within the design specifications.
 
 == Results
-#lorem(20) //TODO: The first issue was that neither 620R or 470nF were available. We used 3 .1uF caps in parallel instead. using python results from figure BLANK
+After modifying our design in the experiment phase, we first verified the $680 Omega$ resistor and $300n F$ capacitor in the same manner as the original design.
 
 ```python
 R2=680 ohm, C=0.300 uF
@@ -217,16 +226,15 @@ R2=680 ohm, C=0.300 uF
   Passband 5kHz    gain=0.8307  need >= 0.8  -> PASS
 Overall: PASS
 ```
-#image("Verify-680R-300nF.svg")
-#lorem(20) //TODO: as you can see all intermediate values of RL pass although cutting it a little closer.
+#figure(image("Verify-680R-300nF.svg"), caption: [Verify 680R & 300nF])
+All intermediate values of $R_L$ pass although cutting it a little closer. The gain for all three conditions is within the design specifications.
 
-#lorem(10) //TODO: we moved on to simulating it
-//TODO: Full schematic design for sim
-//TODO: Simulation results
+We simulated the circuit shown in @circuit-design. The resulting bode plot is shown below (@Bode-600 & @Bode-30k). The bode plot shows the gain of the circuit for all values of $R_L$ from $600 Omega$ to $30k Omega$. The gain is within the design specifications for all values of $R_L$.
+#figure(image("Project05-KiCad/Bode-600.png"), caption: [Bode Plot of Simulated Circuit with $R_L = 600 Omega$]) <Bode-600>
+#figure(image("Project05-KiCad/Bode-30k.png"), caption: [Bode Plot of Simulated Circuit with $R_L = 30k Omega$]) <Bode-30k>
 
-#lorem(20) //TODO: after verifying it in the sim, we built the circuit in the lab.
+After building the circuit in the lab, we measured the gain at $100 Hz$, $4k Hz$, and $5.1k Hz$ for both $600 Omega$ and $30k Omega$. The results are shown below (@Gain-Results). 
 
-//TODO: better caption name
 #figure(grid(columns:2, gutter: .5em,
     image("Wav-600R-100Hz.PNG"),
     image("Wav-30kR-100Hz.PNG"),
@@ -234,20 +242,20 @@ Overall: PASS
     image("Wav-30kR-4kHz.PNG"),
     image("Wav-600R-5100Hz.PNG"),
     image("Wav-30kR-5100Hz.PNG"),
-  ),caption: "Gain"+grid(columns:2, gutter: 3pt,
+  ),caption: "Oscilloscope Gain Results"+grid(columns:2, gutter: 3pt,
     strong("Left:"),strong("Right:"),
     [$600 Omega$],[$30k Omega$],
     $100 Hz$,$100 Hz$,
     $4k Hz$,$4k Hz$,
     $5.1k Hz$,$5.1k Hz$,
 )
-)
+) <Gain-Results>
 
-#lorem(30) //TODO: Explain results
+The results of the lab measurements are consistent with the simulation results. The gain at $100 Hz$ is below $0.7$, while the gain at $4k Hz$ and $5.1k Hz$ is above $0.7$ and $0.8$ respectively, for both worst case loads. This demonstrates that the circuit meets the design specifications across the specified frequency ranges.
 
-//TODO: better caption name
-#figure(image("Bode-600R.PNG"),caption: [Something])
-#figure(image("Bode-30kR.PNG"),caption: [Something])
+The bode plots of the entire frequency range for both $600 Omega$ and $30k Omega$ loads are shown below.
+#figure(image("Bode-600R.PNG"),caption: [Bode Plot with $R_L = 600 Omega$])
+#figure(image("Bode-30kR.PNG"),caption: [Bode Plot with $R_L = 30k Omega$])
 
 == Conclusion
-#lorem(60) //TODO: Explain results
+The circuit design meets the spec-ed requirements for frequency attenuation and gain across the defined frequency ranges. The combination of a series capacitor and a parallel resistor allowed us to have a relatively stable cutoff frequency throughout the load range. Calculations, simulations and experimental results confirm that the circuit performs as intended.
